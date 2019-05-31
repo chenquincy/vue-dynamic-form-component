@@ -1,0 +1,38 @@
+{
+  "name": "vue-dynamic-form",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": {
+    "email": "mail@quincychen.cn",
+    "name": "quincychen",
+    "url": "https://quincychen.cn"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/chenquincy/vue-dynamic-input"
+  },
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build --no-clean --target lib --dest lib --name vue-dynamic-form ./packages/index.js"
+  },
+  "main": "./lib/vue-dymanic-form.umd.min.js",
+  "dependencies": {},
+  "peerDependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-plugin-eslint": "^3.8.0",
+    "@vue/cli-service": "^3.8.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "element-ui": "^2.8.2",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
+  }
+}
