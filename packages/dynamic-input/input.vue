@@ -86,7 +86,7 @@ export default {
       }
     },
     _options () {
-      if (this.extend && this.extend.option instanceof Array) {
+      if (this.extend && this.extend.options instanceof Array) {
         return this.extend.options.map(item => {
           if (typeof item === 'string') {
             return { label: item, value: item }

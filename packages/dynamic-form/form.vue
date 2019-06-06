@@ -1,10 +1,31 @@
 <template>
-  <div class="dynamic-form">
+  <div class="dynamic-form" :style="style">
+    <el-form
+      v-if="_value"
+      ref="dynamic-form"
+      :model="_value"
+      :rules="descriptors">
+      <dynamic-form-item
+        v-for="(descriptor, key) in descriptors"
+        v-model="_value[key]"
+        :key="key"
+        :lang="lang"
+        :label="descriptor.label || key"
+        :prop="key"
+        :label-width="labelWidth"
+        :descriptor="descriptor"
+        :size="size"
+        :background-color="backgroundColor"
+        :bg-color-offset="bgColorOffset">
+      </dynamic-form-item>
+    </el-form>
   </div>
 </template>
 
 <script>
-import { getStringLength, getLongestKeyLength, darkenColor } from '../utils'
+import { Form } from 'element-ui'
+import DynamicFormItem from '../dynamic-form-item/form-item'
+import { getLabelWidth } from '../utils'
 
 export default {
   name: 'dynamic-form',
@@ -12,10 +33,14 @@ export default {
     value: {
       required: true
     },
+    lang: {
+      type: String,
+      default: 'en_US'
+    },
     /**
      * descriptor of value, extend from https://github.com/yiminghe/async-validator
      */
-    descriptor: {
+    descriptors: {
       type: Object,
       required: true
     },
@@ -25,13 +50,6 @@ export default {
     size: {
       type: String,
       default: 'small'
-    },
-    /**
-     * Whether the key(item of array, key-value of object) can be deleted.
-     */
-    keyDeletabled: {
-      type: Boolean,
-      default: false
     },
     /**
      * background-color of form
@@ -52,10 +70,13 @@ export default {
      */
     bgColorOffset: {
       type: Number,
-      default: 0
+      default: 8
     }
   },
-  components: {},
+  components: {
+    ElForm: Form,
+    DynamicFormItem
+  },
   computed: {
     _value: {
       get () {
@@ -66,25 +87,14 @@ export default {
       }
     },
     labelWidth () {
-      let len
-      if (this._value instanceof Array) {
-        len = getStringLength(this._value.length)
-      } else {
-        len = getLongestKeyLength(this._value)
-      }
-      return `${len * this.fontSize + 30}px` // add 30px for required char '*'
+      return getLabelWidth(this.descriptors, this.fontSize)
     },
     style () {
       const style = {
-        fontSize: `${this.fontSize}px`
-      }
-      if (this.bgColorOffset) {
-        style.backgroundColor = this.backgroundColor
+        fontSize: `${this.fontSize}px`,
+        backgroundColor: this.backgroundColor
       }
       return style
-    },
-    subFormBackgroundColor () {
-      return this.bgColorOffset ? darkenColor(this.backgroundColor, this.bgColorOffset) : 'none'
     }
   },
   data () {
@@ -96,36 +106,50 @@ export default {
   methods: {
     init () {
       if (!this.value) {
-        this.$set(this, '_value', this.parseDescriptor(this.descriptor))
+        this.value = {}
+      }
+      this.initValue()
+    },
+    initValue () {
+      for (const key in this.descriptors) {
+        this.setValueKey(this, this.value, key, this.descriptors[key])
       }
     },
-    isComplexType (type) {
-      return ['object', 'array'].includes(type)
-    },
-    parseDescriptor (descriptor) {
-      if (this.isComplexType(descriptor.type)) {
+    setValueKey (target, value, key, descriptor) {
+      if (['object', 'array'].includes(descriptor.type)) {
         if (descriptor.type === 'object') {
-          // object
           if (descriptor.fields) {
-            const data = {}
-            for (const key in descriptor.fields) {
-              data[key] = this.parseDescriptor(descriptor.fields[key])
+            for (const _key in descriptor.fields) {
+              target.setValueKey(target, value[key], _key, descriptor.fields[_key])
             }
-            return data
-          } else if (descriptor.defaultField) {
-            // object is a hashmap
-            return {}
           } else {
-            this._emitError(new Error('Invalid descriptor'))
-            return false
+            if (value[key] === undefined) {
+              target.$set(value, key, {})
+            }
           }
         } else {
-          // array
-          return []
+          if (value[key] === undefined) {
+            target.$set(value, key, [])
+          }
         }
       } else {
-        return null
+        if (value[key] === undefined) {
+          target.$set(value, key, null)
+        }
       }
+    },
+    validate () {
+      return new Promise((resolve, reject) => {
+        this.$refs['dynamic-form'].validate(valid => {
+          resolve(valid)
+        })
+      })
+    },
+    resetField () {
+      this.$refs['dynamic-form'].resetFields()
+    },
+    clearValidate () {
+      this.$refs['dynamic-form'].clearValidate()
     },
     _emitError (error) {
       this.$emit('error', error)

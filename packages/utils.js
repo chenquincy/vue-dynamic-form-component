@@ -14,13 +14,16 @@ export function getStringLength (str) {
  * get longest key's font length of object
  * @param {Object} object
  */
-export function getLongestKeyLength (object) {
-  if (typeof object !== 'object') return 0
+export function getLabelWidth (descriptors, fontSize) {
   let maxLen = 0
-  Object.keys(object || {}).forEach(key => {
-    maxLen = Math.max(getStringLength(key), maxLen)
-  })
-  return maxLen
+  if (descriptors instanceof Array) {
+    maxLen = getStringLength('Item ' + descriptors.length)
+  } else {
+    for (const key in descriptors) {
+      maxLen = Math.max(maxLen, getStringLength((descriptors[key] || {}).label || key))
+    }
+  }
+  return `${maxLen * fontSize + 30}px` // add 30px for required char '*'
 }
 
 /**
@@ -30,6 +33,7 @@ export function getLongestKeyLength (object) {
  */
 const DARKEST_COLOR = 150
 export function darkenColor (color, offset) {
+  if (offset === 0) return color
   if (color[0] === '#') color = color.slice(1)
   offset = parseInt(offset)
   if (isNaN(offset)) return color
@@ -42,10 +46,33 @@ export function darkenColor (color, offset) {
   let b = ((num >> 8) & 0x00FF) + offset
   let g = (num & 0x0000FF) + offset
 
-  r = Math.min(DARKEST_COLOR, r)
-  b = Math.min(DARKEST_COLOR, b)
-  g = Math.min(DARKEST_COLOR, g)
+  r = Math.max(DARKEST_COLOR, r)
+  b = Math.max(DARKEST_COLOR, b)
+  g = Math.max(DARKEST_COLOR, g)
 
   const newColor = g | (b << 8) | (r << 16)
   return `#${newColor.toString(16)}`
+}
+
+export function parseDescriptor (descriptor) {
+  if (['object', 'array'].includes(descriptor.type)) {
+    if (descriptor.type === 'object') {
+      // object
+      if (descriptor.fields) {
+        const data = {}
+        for (const key in descriptor.fields) {
+          data[key] = parseDescriptor(descriptor.fields[key])
+        }
+        return data
+      } else if (descriptor.defaultField) {
+        // object is a hashmap
+        return {}
+      }
+    } else {
+      // array
+      return []
+    }
+  } else {
+    return null
+  }
 }
