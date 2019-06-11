@@ -6,6 +6,7 @@
     :prop="prop"
     :size="size"
     :rules="descriptor"
+    :required="descriptor.required"
     :label-width="labelWidth">
     <dynamic-input
       v-if="!isComplexType(descriptor.type)"

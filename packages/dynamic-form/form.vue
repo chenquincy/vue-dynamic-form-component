@@ -31,6 +31,7 @@ export default {
   name: 'dynamic-form',
   props: {
     value: {
+      type: Object,
       required: true
     },
     lang: {
@@ -105,20 +106,20 @@ export default {
   },
   methods: {
     init () {
-      if (!this.value) {
-        this.value = {}
-      }
       this.initValue()
     },
     initValue () {
       for (const key in this.descriptors) {
-        this.setValueKey(this, this.value, key, this.descriptors[key])
+        this.setValueKey(this, this._value, key, this.descriptors[key])
       }
     },
     setValueKey (target, value, key, descriptor) {
       if (['object', 'array'].includes(descriptor.type)) {
         if (descriptor.type === 'object') {
           if (descriptor.fields) {
+            if (value[key] === undefined) {
+              target.$set(value, key, {})
+            }
             for (const _key in descriptor.fields) {
               target.setValueKey(target, value[key], _key, descriptor.fields[_key])
             }

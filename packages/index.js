@@ -1,7 +1,7 @@
-import DynamicInput from './dynamic-input/index'
+import DynamicForm from './dynamic-form/index'
 
 const components = [
-  DynamicInput
+  DynamicForm
 ]
 
 const install = function (Vue) {
@@ -20,5 +20,5 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  DynamicInput
+  DynamicForm
 }

@@ -23,17 +23,7 @@ export default {
   },
   data () {
     return {
-      data: {
-        normalObject: {
-          prop1: {
-            boolean: false,
-            number: 1,
-            date: null,
-            string: 'test',
-            enum: 'value-1'
-          }
-        }
-      },
+      data: {},
       descriptors
     }
   },
@@ -48,7 +38,8 @@ export default {
 </script>
 
 <style lang="scss">
-.input-wrap {
-  width: 400px;
+html, body {
+  margin: 0;
+  padding: 0;
 }
 </style>
