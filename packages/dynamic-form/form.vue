@@ -10,7 +10,7 @@
         v-model="_value[key]"
         :key="key"
         :lang="lang"
-        :label="descriptor.label || key"
+        :label="findTypeDescriptor(descriptor).label || key"
         :prop="key"
         :label-width="labelWidth"
         :descriptor="descriptor"
@@ -18,14 +18,17 @@
         :background-color="backgroundColor"
         :bg-color-offset="bgColorOffset">
       </dynamic-form-item>
+      <el-form-item v-if="$slots.operations" class="operations" :label-width="labelWidth">
+        <slot name="operations"></slot>
+      </el-form-item>
     </el-form>
   </div>
 </template>
 
 <script>
-import { Form } from 'element-ui'
+import { Form, FormItem } from 'element-ui'
 import DynamicFormItem from '../dynamic-form-item/form-item'
-import { getLabelWidth } from '../utils'
+import { isComplexType, getLabelWidth, findTypeDescriptor } from '../utils'
 
 export default {
   name: 'dynamic-form',
@@ -36,7 +39,8 @@ export default {
     },
     lang: {
       type: String,
-      default: 'en_US'
+      default: 'en_US',
+      validator: val => ['en_US', 'zh_CN'].includes(val)
     },
     /**
      * descriptor of value, extend from https://github.com/yiminghe/async-validator
@@ -76,6 +80,7 @@ export default {
   },
   components: {
     ElForm: Form,
+    ElFormItem: FormItem,
     DynamicFormItem
   },
   computed: {
@@ -105,6 +110,7 @@ export default {
     this.init()
   },
   methods: {
+    findTypeDescriptor,
     init () {
       this.initValue()
     },
@@ -114,9 +120,11 @@ export default {
       }
     },
     setValueKey (target, value, key, descriptor) {
-      if (['object', 'array'].includes(descriptor.type)) {
+      if (isComplexType(descriptor.type)) {
         if (descriptor.type === 'object') {
+          // object
           if (descriptor.fields) {
+            // normal object
             if (value[key] === undefined) {
               target.$set(value, key, {})
             }
@@ -124,11 +132,13 @@ export default {
               target.setValueKey(target, value[key], _key, descriptor.fields[_key])
             }
           } else {
+            // hashmap
             if (value[key] === undefined) {
               target.$set(value, key, {})
             }
           }
         } else {
+          // array
           if (value[key] === undefined) {
             target.$set(value, key, [])
           }
@@ -139,21 +149,24 @@ export default {
         }
       }
     },
-    validate () {
-      return new Promise((resolve, reject) => {
+    validate (func) {
+      if (typeof func === 'function') {
         this.$refs['dynamic-form'].validate(valid => {
-          resolve(valid)
+          func(valid)
         })
-      })
+      } else {
+        return new Promise((resolve, reject) => {
+          this.$refs['dynamic-form'].validate(valid => {
+            resolve(valid)
+          })
+        })
+      }
     },
-    resetField () {
+    resetFields () {
       this.$refs['dynamic-form'].resetFields()
     },
     clearValidate () {
       this.$refs['dynamic-form'].clearValidate()
-    },
-    _emitError (error) {
-      this.$emit('error', error)
     }
   }
 }

@@ -1,3 +1,7 @@
+export function isComplexType (type) {
+  return ['object', 'array'].includes(type)
+}
+
 /**
  * get font length of string
  * @param {String} str
@@ -54,7 +58,12 @@ export function darkenColor (color, offset) {
   return `#${newColor.toString(16)}`
 }
 
-export function parseDescriptor (descriptor) {
+export function findTypeDescriptor (descriptor) {
+  return descriptor instanceof Array ? descriptor.find(item => !!item.type) : descriptor
+}
+
+export function parseDescriptor (_descriptor) {
+  let descriptor = findTypeDescriptor(_descriptor)
   if (['object', 'array'].includes(descriptor.type)) {
     if (descriptor.type === 'object') {
       // object

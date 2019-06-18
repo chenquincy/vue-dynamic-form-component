@@ -5,8 +5,11 @@
       ref="dynamic-form"
       lang="zh_CN"
       :descriptors="descriptors">
+      <template slot="operations">
+        <el-button @click="reset">重置</el-button>
+        <el-button type="primary" @click="validate" plain>校验</el-button>
+      </template>
     </dynamic-form>
-    <el-button @click="validForm">检验</el-button>
   </div>
 </template>
 
@@ -18,8 +21,8 @@ import descriptors from './descriptor'
 export default {
   name: 'app',
   components: {
-    ElButton: Button,
-    DynamicForm
+    DynamicForm,
+    ElButton: Button
   },
   data () {
     return {
@@ -28,9 +31,11 @@ export default {
     }
   },
   methods: {
-    async validForm () {
-      const valid = await this.$refs['dynamic-form'].validate()
-      console.log(valid)
+    reset () {
+      this.$refs['dynamic-form'].resetFields()
+    },
+    validate () {
+      this.$refs['dynamic-form'].validate()
     }
   },
   created () {}

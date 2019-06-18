@@ -11,8 +11,8 @@
   <!-- integer, number, float type use el-input with v-model.number -->
   <el-input v-else-if="['integer', 'number', 'float'].includes(type)" v-model.number="_value" :size="size" :disabled="disabled" :placeholder="placeholder"></el-input>
   <!-- enum type use el-select -->
-  <el-select v-else-if="type === 'enum'" class="dynamic-input" v-model="_value" :size="size" :disabled="disabled" :placeholder="placeholder">
-    <el-option v-for="option in _options" :key="option.label" :value="option.value" :label="option.label"></el-option>
+  <el-select v-else-if="type === 'enum'" class="dynamic-input" v-model="_value" :size="size" :disabled="disabled" :placeholder="placeholder" :multiple="extend && extend.multiple">
+    <el-option v-for="option in _options" :key="option.label" :value="option.value" :label="option.label" :disabled="option.disabled"></el-option>
   </el-select>
   <!-- date type use el-date-picker -->
   <el-date-picker v-else-if="type === 'date'" class="dynamic-input" v-model="_value" :size="size" :disabled="disabled" type="datetime" :placeholder="placeholder"></el-date-picker>
@@ -119,4 +119,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.el-input {
+  width: calc(100% - 30px);
+}
 </style>

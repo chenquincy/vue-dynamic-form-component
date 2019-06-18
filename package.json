@@ -13,7 +13,9 @@
   },
   "scripts": {
     "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --no-clean --target lib --dest lib --name vue-dynamic-form ./packages/index.js"
+    "build": "vue-cli-service build --target lib --dest lib --name vue-dynamic-form ./packages/index.js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "main": "./lib/vue-dymanic-form.umd.min.js",
   "dependencies": {},
@@ -27,12 +29,13 @@
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
     "babel-plugin-component": "^1.1.1",
-    "element-ui": "^2.8.2",
+    "element-ui": "2.7.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "vuepress": "^1.0.1"
   }
 }
