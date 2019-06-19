@@ -33,14 +33,7 @@ module.exports = {
       }
     },
     nav: [
-      { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form' },
-      {
-        text: 'Test',
-        items: [
-          { text: '简体中文', link: '/language/chinese' },
-          { text: 'English', link: '/language/japanese' }
-        ]
-      }
+      { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form' }
     ]
   }
 }
