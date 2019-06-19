@@ -10,9 +10,9 @@ VueDynamicForm只能在[Vue](https://vuejs.org/)框架中使用，请提前安�
 
 ``` bash
 # 安装
-yarn add vue-dynamic-form
+yarn add vue-dynamic-form2
 # or NPM
-npm install vue-dynamic-form
+npm install vue-dynamic-form2
 ```
 
 ### Script标签引入
@@ -25,7 +25,7 @@ npm install vue-dynamic-form
 
 ``` js
 import Vue from 'Vue'
-import DynamicForm from 'vue-dynamic-form'
+import DynamicForm from 'vue-dynamic-form2'
 
 Vue.use(DynamicForm)
 ```
@@ -34,7 +34,7 @@ Vue.use(DynamicForm)
 
 ``` vue
 <script>
-import DynamicForm from 'vue-dynamic-form'
+import DynamicForm from 'vue-dynamic-form2'
 export default {
   components: {
     DynamicForm

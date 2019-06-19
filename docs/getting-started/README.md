@@ -10,9 +10,9 @@ VueDynamicForm should use with [Vue](https://vuejs.org/), please install Vue fir
 
 ``` bash
 # 安装
-yarn add vue-dynamic-form
+yarn add vue-dynamic-form2
 # or NPM
-npm install vue-dynamic-form
+npm install vue-dynamic-form2
 ```
 
 ### Script Tag
@@ -25,7 +25,7 @@ Please download the source code by yourself, then import `lib/vue-dynamic-form.u
 
 ``` js
 import Vue from 'Vue'
-import DynamicForm from 'vue-dynamic-form'
+import DynamicForm from 'vue-dynamic-form2'
 
 Vue.use(DynamicForm)
 ```
@@ -34,7 +34,7 @@ Vue.use(DynamicForm)
 
 ``` vue
 <script>
-import DynamicForm from 'vue-dynamic-form'
+import DynamicForm from 'vue-dynamic-form2'
 export default {
   components: {
     DynamicForm
