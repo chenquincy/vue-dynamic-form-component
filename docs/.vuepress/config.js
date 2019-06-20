@@ -2,13 +2,13 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'VueDynamicForm',
-      description: 'Don\'t want to write simple form code any more? Try vue-dynamic-form'
+      title: 'VueDynamicFormComponent',
+      description: 'Don\'t want to write simple form code any more? Try vue-dynamic-form-component'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'VueDynamicForm',
-      description: '不想再写简单的表单代码了？试试 vue-dynamic-form'
+      title: 'VueDynamicFormComponent',
+      description: '不想再写简单的表单代码了？试试 vue-dynamic-form-component'
     }
   },
   themeConfig: {
@@ -33,7 +33,7 @@ module.exports = {
       }
     },
     nav: [
-      { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form' }
+      { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form-component' }
     ]
   }
 }

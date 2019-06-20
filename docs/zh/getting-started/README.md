@@ -1,7 +1,7 @@
 # 快速上手
 
 ::: tip 温馨提示
-VueDynamicForm只能在[Vue](https://vuejs.org/)框架中使用，请提前安装好Vue依赖
+VueDynamicFormComponent只能在[Vue](https://vuejs.org/)框架中使用，请提前安装好Vue依赖
 :::
 
 ## 安装
@@ -10,14 +10,14 @@ VueDynamicForm只能在[Vue](https://vuejs.org/)框架中使用，请提前安�
 
 ``` bash
 # 安装
-yarn add vue-dynamic-form2
+yarn add vue-dynamic-form-component
 # or NPM
-npm install vue-dynamic-form2
+npm install vue-dynamic-form-component
 ```
 
 ### Script标签引入
 
-请自行下载对应版本的源代码，并引入 `lib/vue-dynamic-form.umd.js`
+请自行下载对应版本的源代码，并引入 `lib/vue-dynamic-form-component.umd.js`
 
 ## 注册
 
@@ -25,7 +25,7 @@ npm install vue-dynamic-form2
 
 ``` js
 import Vue from 'Vue'
-import DynamicForm from 'vue-dynamic-form2'
+import DynamicForm from 'vue-dynamic-form-component'
 
 Vue.use(DynamicForm)
 ```
@@ -34,7 +34,7 @@ Vue.use(DynamicForm)
 
 ``` vue
 <script>
-import DynamicForm from 'vue-dynamic-form2'
+import DynamicForm from 'vue-dynamic-form-component'
 export default {
   components: {
     DynamicForm

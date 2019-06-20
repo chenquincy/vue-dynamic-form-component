@@ -1,6 +1,6 @@
 # descriptors
 
-**descriptors**  is extended from [async-validator](https://github.com/yiminghe/async-validator). Just need to write **descriptors** follow the rules，**VueDynamicForm** will generate the right form component automatically(use [element-ui](https://element.faas.ele.me)).
+**descriptors**  is extended from [async-validator](https://github.com/yiminghe/async-validator). Just need to write **descriptors** follow the rules，**VueDynamicFormComponent** will generate the right form component automatically(use [element-ui](https://element.faas.ele.me)).
 
 **descriptors** 's format:  `{ <key>: <descriptor> }`
 

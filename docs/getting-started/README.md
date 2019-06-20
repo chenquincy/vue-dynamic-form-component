@@ -1,7 +1,7 @@
 # Getting Started
 
 ::: tip Warm Prompt
-VueDynamicForm should use with [Vue](https://vuejs.org/), please install Vue first.
+VueDynamicFormComponent should use with [Vue](https://vuejs.org/), please install Vue first.
 :::
 
 ## Installation
@@ -10,14 +10,14 @@ VueDynamicForm should use with [Vue](https://vuejs.org/), please install Vue fir
 
 ``` bash
 # 安装
-yarn add vue-dynamic-form2
+yarn add vue-dynamic-form-component
 # or NPM
-npm install vue-dynamic-form2
+npm install vue-dynamic-form-component
 ```
 
 ### Script Tag
 
-Please download the source code by yourself, then import `lib/vue-dynamic-form.umd.js`
+Please download the source code by yourself, then import `lib/vue-dynamic-form-component.umd.js`
 
 ## Registration
 
@@ -25,7 +25,7 @@ Please download the source code by yourself, then import `lib/vue-dynamic-form.u
 
 ``` js
 import Vue from 'Vue'
-import DynamicForm from 'vue-dynamic-form2'
+import DynamicForm from 'vue-dynamic-form-component'
 
 Vue.use(DynamicForm)
 ```
@@ -34,7 +34,7 @@ Vue.use(DynamicForm)
 
 ``` vue
 <script>
-import DynamicForm from 'vue-dynamic-form2'
+import DynamicForm from 'vue-dynamic-form-component'
 export default {
   components: {
     DynamicForm
