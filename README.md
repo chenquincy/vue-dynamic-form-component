@@ -1,11 +1,11 @@
 # Introduction
 
-**VueDynamicForm** is a dynamic form component base on [element-ui](https://element.faas.ele.me/#/zh-CN) and [async-validator](https://github.com/yiminghe/async-validator). You just need to write **descriptors**(reference to [async-validator](https://github.com/yiminghe/async-validator)) of the data you want, **VueDynamicForm** will generate the form automatically.
+**VueDynamicFormComponent** is a dynamic form component base on [element-ui](https://element.faas.ele.me/#/zh-CN) and [async-validator](https://github.com/yiminghe/async-validator). You just need to write **descriptors**(reference to [async-validator](https://github.com/yiminghe/async-validator)) of the data you want, **VueDynamicFormComponent** will generate the form automatically.
 
 ## Docs
 
-- [English Docs](http://vue-dynamic-form.quincychen.cn)
-- [中文文档](http://vue-dynamic-form.quincychen.cn/zh/)
+- [English Docs](http://vue-dynamic-form-component.quincychen.cn)
+- [中文文档](http://vue-dynamic-form-component.quincychen.cn/zh/)
 
 ## Features
 
@@ -17,14 +17,14 @@
 
 ## Todo
 
-VueDynamicForm can do more. There are a few things that it currently doesn't support but are planned:
+VueDynamicFormComponent can do more. There are a few things that it currently doesn't support but are planned:
 
 - Support more component
 - Custom theme
 
 ## Question
 
-Please submit your question in [Github Issue](https://github.com/chenquincy/vue-dynamic-form/issues) .
+Please submit your question in [Github Issue](https://github.com/chenquincy/vue-dynamic-form-component/issues) .
 
 ## License
 
