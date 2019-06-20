@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v1.0.0...v1.0.1) (2019-06-20)
+
+
+### Bug Fixes
+
+* change name to vue-dynamic-form-component ([2ffea42](https://github.com/chenquincy/vue-dynamic-form-component/commit/2ffea42))
+* change package name ([8b9e15c](https://github.com/chenquincy/vue-dynamic-form-component/commit/8b9e15c))
+* parent form's label-width compute error. ([8d5b369](https://github.com/chenquincy/vue-dynamic-form-component/commit/8d5b369))
+
+
+
 # 1.0.0 (2019-06-19)
 
 
