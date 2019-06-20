@@ -1,6 +1,6 @@
 # descriptors
 
-**descriptors** 基于 [async-validator](https://github.com/yiminghe/async-validator) 扩展。只需要按照规则编写 **descriptors**，**VueDynamicForm** 就会自动生成对应的表单元素（表单组件基于 [element-ui](https://element.faas.ele.me)）。
+**descriptors** 基于 [async-validator](https://github.com/yiminghe/async-validator) 扩展。只需要按照规则编写 **descriptors**，**VueDynamicFormComponent** 就会自动生成对应的表单元素（表单组件基于 [element-ui](https://element.faas.ele.me)）。
 
 **descriptors** 的格式为：`{ <key>: <descriptor> }`
 

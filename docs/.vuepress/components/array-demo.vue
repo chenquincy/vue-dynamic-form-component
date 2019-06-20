@@ -35,7 +35,7 @@ export default {
               { label: 'option-0', value: 0, disabled: true },
               { label: 'option-1', value: 1 },
               { label: 'option-2', value: 2 },
-              { label: 'option-2', value: 3 }
+              { label: 'option-3', value: 3 }
             ]
           }
         }
