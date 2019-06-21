@@ -120,6 +120,6 @@ export default {
 
 <style lang="scss" scoped>
 .el-input {
-  width: calc(100% - 30px);
+  width: calc(100% - 60px);
 }
 </style>
