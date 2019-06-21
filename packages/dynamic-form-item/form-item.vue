@@ -2,7 +2,7 @@
   <el-form-item
     :ref="prop"
     class="dynamic-form-item"
-    :label="label || prop"
+    :label="labelWidth === '0px' ? '' : (label || prop)"
     :prop="prop"
     :size="size"
     :rules="descriptor"
@@ -33,6 +33,7 @@
             :label="(findTypeDescriptor(_descriptor)).label || key"
             :prop="prop ? prop + '.' + key : key"
             :descriptor="_descriptor"
+            :lang="lang"
             :label-width="getLabelWidth(typeDescriptor.fields, fontSize)"
             :background-color="subFormBackgroundColor">
           </dynamic-form-item>
@@ -51,6 +52,7 @@
             :prop="prop ? prop + '.' + key : key"
             :deletable="true"
             :descriptor="typeDescriptor.defaultField"
+            :lang="lang"
             :label-width="getLabelWidth(_value, fontSize)"
             :background-color="subFormBackgroundColor"
             @delete="deleteKey(key)">
@@ -83,6 +85,7 @@
             :prop="prop ? prop + '.' + key : key"
             :deletable="true"
             :descriptor="typeDescriptor.defaultField"
+            :lang="lang"
             label-width="0px"
             :background-color="subFormBackgroundColor"
             @delete="deleteItem(key)">
@@ -251,5 +254,9 @@ export default {
 }
 .delete-button:hover {
   color: red;
+}
+.dynamic-input + .delete-button {
+  top: auto;
+  right: auto;
 }
 </style>
