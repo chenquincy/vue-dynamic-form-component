@@ -24,8 +24,12 @@ export function getLabelWidth (descriptors, fontSize) {
     maxLen = getStringLength('Item ' + descriptors.length)
   } else {
     for (const key in descriptors) {
-      const typeDescriptor = findTypeDescriptor(descriptors[key])
-      maxLen = Math.max(maxLen, getStringLength(typeDescriptor.label || key))
+      if (descriptors[key]) {
+        const typeDescriptor = findTypeDescriptor(descriptors[key])
+        maxLen = Math.max(maxLen, getStringLength(typeDescriptor.label || key))
+      } else {
+        maxLen = Math.max(maxLen, getStringLength(key))
+      }
     }
   }
   return `${maxLen * fontSize + 30}px` // add 30px for required char '*'
