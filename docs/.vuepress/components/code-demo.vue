@@ -11,7 +11,6 @@
 
 <script>
 export default {
-  name: 'code-demo',
   props: {
     name: String,
     collapse: {

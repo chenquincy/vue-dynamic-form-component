@@ -2,13 +2,13 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'VueDynamicFormComponent',
-      description: 'Don\'t want to write simple form code any more? Try vue-dynamic-form-component'
+      title: 'VueDynamicForm',
+      description: 'Vue dynamic nested form component. Support nested Object/Hashmap/Array.'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'VueDynamicFormComponent',
-      description: '不想再写简单的表单代码了？试试 vue-dynamic-form-component'
+      title: 'VueDynamicForm',
+      description: 'Vue动态嵌套表单组件，支持嵌套对象/Hashmap/数组'
     }
   },
   themeConfig: {
@@ -20,7 +20,7 @@ module.exports = {
         label: 'English',
         sidebar: [
           { title: 'Guide', collapsable: false, children: ['/guide/', '/getting-started/'] },
-          { title: 'API', collapsable: false, children: ['/api/dynamic-form/', '/api/descriptor/'] }
+          { title: 'API', collapsable: false, children: ['/api/dynamic-form/', '/api/descriptors/'] }
         ]
       },
       '/zh/': {
@@ -28,7 +28,7 @@ module.exports = {
         label: '简体中文',
         sidebar: [
           { title: '指南', collapsable: false, children: ['/zh/guide/', '/zh/getting-started/'] },
-          { title: 'API', collapsable: false, children: ['/zh/api/dynamic-form/', '/zh/api/descriptor/'] }
+          { title: 'API', collapsable: false, children: ['/zh/api/dynamic-form/', '/zh/api/descriptors/'] }
         ]
       }
     },

@@ -7,7 +7,6 @@
 
 <script>
 export default {
-  name: 'base-data-demo',
   data () {
     return {
       descriptors: {
@@ -16,7 +15,15 @@ export default {
         string: { type: 'string', label: 'string \'s label', required: true, pattern: /^test$/g },
         url: { type: 'url', label: 'url \'s label', required: true, placeholder: 'please input the url' },
         email: { type: 'email', label: 'email \'s label', required: false },
-        enum: { type: 'enum', label: 'enum\'s label', enum: ['value-1', 'value-2'] }
+        enum: {
+          type: 'enum',
+          label: 'enum\'s label',
+          enum: ['value-1', 'value-2'],
+          options: [
+            { label: 'option-1', value: 'value-1', disabled: true },
+            { label: 'option-2', value: 'value-2' }
+          ]
+        }
       },
       data: {}
     }

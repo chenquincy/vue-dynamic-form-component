@@ -7,7 +7,6 @@
 
 <script>
 export default {
-  name: 'hashmap-demo',
   data () {
     return {
       descriptors: {

@@ -2,7 +2,10 @@
 home: true
 heroImage: /logo.png
 actionText: 快速开始 →
-actionLink: /zh/guide/
+actionLink: /zh/getting-started/
+meta:
+- name: keywords
+  content: vue 动态 嵌套 表单 多级 组件
 features:
 - title: 使用descriptors生成表单
   details: 只需要提供目标数据的descriptor(基于async-validator扩展)，就可以自动生成对应的表单元素(基于element-ui)
@@ -17,7 +20,7 @@ footer: MIT Licensed | Copyright © QuincyChen
 
 ### 示例
 
-<code-demo name="home-demo" lang="zh_CN"></code-demo>
+<code-demo name="home-demo" :collapse="false" lang="zh_CN"></code-demo>
 
 <<< @/docs/.vuepress/components/home-demo.vue
 
