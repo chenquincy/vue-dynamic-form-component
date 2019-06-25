@@ -6,8 +6,8 @@
 
 ## Docs
 
-- [English Docs](http://vue-dynamic-form-component.quincychen.cn)
-- [中文文档](http://vue-dynamic-form-component.quincychen.cn/zh/)
+- [English Docs](http://vue-dynamic-form.quincychen.cn)
+- [中文文档](http://vue-dynamic-form.quincychen.cn/zh/)
 
 ## Features
 
