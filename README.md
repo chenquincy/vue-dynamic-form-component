@@ -2,6 +2,8 @@
 
 **VueDynamicFormComponent** is a dynamic form component base on [element-ui](https://element.faas.ele.me/#/zh-CN) and [async-validator](https://github.com/yiminghe/async-validator). You just need to write **descriptors**(reference to [async-validator](https://github.com/yiminghe/async-validator)) of the data you want, **VueDynamicFormComponent** will generate the form automatically.
 
+![vue-dynamic-form-component.gif](https://static.quincychen.cn/vue-dynamic-form-component.gif)
+
 ## Docs
 
 - [English Docs](http://vue-dynamic-form-component.quincychen.cn)

@@ -188,7 +188,7 @@ const descriptors = {
   name: [
     { type: 'string', required: true },
     {
-      validator: (rule, value, callback) {
+      validator: function (rule, value, callback) {
       	if (value.length < 5) {
     			return callback(new Error('name should logger than 5'))
     		}
