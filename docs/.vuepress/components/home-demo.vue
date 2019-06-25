@@ -12,7 +12,6 @@
 
 <script>
 export default {
-  name: 'home-demo',
   data () {
     return {
       descriptors: {

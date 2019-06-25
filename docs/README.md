@@ -2,7 +2,10 @@
 home: true
 heroImage: /logo.png
 actionText: Getting Started →
-actionLink: /guide/
+actionLink: /getting-started/
+meta:
+- name: keywords
+content: vue dynamic nested form component
 features:
 - title: Generate form by descriptors
   details: Write only data's descriptor(extend from async-validate), then automatically generate form(use element-ui)
@@ -17,7 +20,7 @@ footer: MIT Licensed | Copyright © QuincyChen
 
 ### Example
 
-<code-demo name="home-demo"></code-demo>
+<code-demo name="home-demo" :collapse="false"></code-demo>
 
 <<< @/docs/.vuepress/components/home-demo.vue
 

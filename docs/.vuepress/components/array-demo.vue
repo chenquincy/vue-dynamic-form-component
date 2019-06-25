@@ -7,19 +7,27 @@
 
 <script>
 export default {
-  name: 'array-demo',
   data () {
     return {
       descriptors: {
         array: {
           type: 'array',
-          label: 'array',
+          label: 'array label',
           defaultField: {
             type: 'object',
             fields: {
               boolean: { type: 'boolean', required: true },
-              number: { type: 'number', required: true },
-              string: { type: 'string', required: true, pattern: /^test$/g }
+              string: { type: 'string', required: true, pattern: /^test$/g },
+              array: {
+                type: 'array',
+                defaultField: {
+                  type: 'object',
+                  fields: {
+                    boolean: { type: 'boolean', required: true },
+                    string: { type: 'string', required: true, pattern: /^test$/g }
+                  }
+                }
+              }
             }
           }
         },

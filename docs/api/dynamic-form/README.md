@@ -1,12 +1,12 @@
 # dynamic-form
 
-## Component Prop
+## Props
 
 | prop            | description                                                  | type   | option values       | default | required |
 | --------------- | ------------------------------------------------------------ | ------ | ------------------- | ------- | -------- |
 | value           | form data                                                    | object |                     |         | yes      |
 | lang            | language                                                     | string | en_US,zh_CN         | en_US   |          |
-| descriptors     | descriptors of form data, refer to [descriptor](/zh/api/descriptor/) | object |                     |         | yes      |
+| descriptors     | descriptors of form data, refer to [descriptor](/zh/api/descriptors/) | object |                     |         | yes      |
 | size            | size of form component                                       | string | medium,small,mini   | small   |          |
 | backgroundColor | root form background color                                   | string | Hex color or 'none' | none    |          |
 | fontSize        | font size of form                                            | number |                     | 14      |          |
@@ -18,7 +18,7 @@
 | ---------- | ------------------------------------------------------------ |
 | operations | operation slot for form, use to put submit/reset button generally |
 
-## Component Methods
+## Methods
 
 | method        | description                                                 | params                                                       |
 | ------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |

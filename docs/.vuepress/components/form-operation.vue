@@ -2,16 +2,11 @@
   <dynamic-form
     ref="dynamic-form"
     v-model="data"
-    lang="zh_CN"
-    :descriptors="descriptors"
-    size="mini"
-    background-color="#FEFEFE"
-    :font-size="12"
-    :bg-color-offset="5">
+    :descriptors="descriptors">
     <template slot="operations">
       <el-button @click="clearValidate">clearValidate</el-button>
-      <el-button @click="resetFields">resetFields</el-button>
-      <el-button type="primary" @click="validate" plain>validate</el-button>
+      <el-button type="primary" @click="resetFields" plain>resetFields</el-button>
+      <el-button type="primary" @click="validate">validate</el-button>
     </template>
   </dynamic-form>
 </template>
@@ -44,8 +39,9 @@ export default {
     resetFields () {
       this.$refs['dynamic-form'].resetFields()
     },
-    validate () {
-      this.$refs['dynamic-form'].validate()
+    async validate () {
+      const valid = await this.$refs['dynamic-form'].validate()
+      window.alert(`valid result ====> ${valid}`)
     }
   }
 }
