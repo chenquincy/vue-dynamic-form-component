@@ -1,5 +1,6 @@
 <template>
   <el-form-item
+    v-show="!descriptor.hidden"
     :ref="prop"
     class="dynamic-form-item"
     :label="labelWidth === '0px' ? '' : (label || prop)"
@@ -34,6 +35,7 @@
             :prop="prop ? prop + '.' + key : key"
             :descriptor="_descriptor"
             :lang="lang"
+            :languages="languages"
             :label-width="getLabelWidth(typeDescriptor.fields, fontSize)"
             :background-color="subFormBackgroundColor">
           </dynamic-form-item>
@@ -53,6 +55,7 @@
             :deletable="true"
             :descriptor="typeDescriptor.defaultField"
             :lang="lang"
+            :languages="languages"
             :label-width="getLabelWidth(_value, fontSize)"
             :background-color="subFormBackgroundColor"
             @delete="deleteKey(key)">
@@ -86,6 +89,7 @@
             :deletable="true"
             :descriptor="typeDescriptor.defaultField"
             :lang="lang"
+            :languages="languages"
             label-width="0px"
             :background-color="subFormBackgroundColor"
             @delete="deleteItem(key)">
@@ -160,7 +164,8 @@ export default {
     lang: {
       type: String,
       default: 'en_US'
-    }
+    },
+    languages: Object
   },
   components: {
     ElFormItem: FormItem,

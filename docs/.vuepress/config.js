@@ -38,5 +38,11 @@ module.exports = {
     nav: [
       { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form-component' }
     ]
+  },
+  plugins: {
+    'sitemap': {
+      hostname: 'https://vue-dynamic-form.quincychen.cn',
+      exclude: ['/404.html']
+    }
   }
 }

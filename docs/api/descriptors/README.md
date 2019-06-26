@@ -34,11 +34,15 @@
 
 ### label
 
-`string`, field's label in form, should be declared with `type` in one object.
+`string`, field's label in form, should be declared with `type` in the same object.
 
 ### placeholder
 
-`string`, field component's placeholder prop, should be declared with `type` in one object, invalid while `type === 'object' | 'array'`
+`string`, field component's placeholder prop, should be declared with `type` in the same object, invalid while `type === 'object' | 'array'`
+
+### hidden
+
+`boolean` , whether hidden the input component of value, should be declared with `type` in the same object. Note that the hidden value still will be validated while validating.
 
 ### required
 

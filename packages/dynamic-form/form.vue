@@ -14,6 +14,7 @@
         :prop="key"
         :label-width="labelWidth"
         :descriptor="descriptor"
+        :languages="languages"
         :size="size"
         :background-color="backgroundColor"
         :bg-color-offset="bgColorOffset">
@@ -42,6 +43,10 @@ export default {
       default: 'en_US',
       validator: val => ['en_US', 'zh_CN'].includes(val)
     },
+    /**
+     * custom languages, format refer to packages/i18n.js
+     */
+    languages: Object,
     /**
      * descriptor of value, extend from https://github.com/yiminghe/async-validator
      */

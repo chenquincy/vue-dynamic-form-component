@@ -12,6 +12,21 @@
 | fontSize        | font size of form                                            | number |                     | 14      |          |
 | bgColorOffset   | form background color offset                                 | number |                     | 8       |          |
 
+`languages` format：
+
+```js
+// <lang> is the lang prop
+{
+  <lang>: {
+    addKeyPlaceholder: 'Input the key you want to add',
+    addKeyButtonText: 'Add Key',
+    addArrayItemButtonText: 'Add Item'
+  }
+}
+```
+
+
+
 ## Slots
 
 | slot name  | description                                                 |
