@@ -18,7 +18,6 @@
     "docs:build": "vuepress build docs"
   },
   "main": "./lib/vue-dynamic-form-component.umd.min.js",
-  "dependencies": {},
   "peerDependencies": {
     "vue": "^2.6.10"
   },
@@ -36,6 +35,7 @@
     "sass-loader": "^7.1.0",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
-    "vuepress": "^1.0.1"
+    "vuepress": "^1.0.1",
+    "vuepress-plugin-sitemap": "^2.1.2"
   }
 }

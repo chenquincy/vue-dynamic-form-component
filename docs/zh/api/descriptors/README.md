@@ -38,6 +38,10 @@
 
 `string` 类型，对应输入组件的placeholder值，需和 `type` 在同一个对象中，`type === 'object' | 'array'` 时无效
 
+### hidden
+
+`boolean` 类型，是否隐藏对应的输入组件，需和 `type` 在同一个对象中。需要注意的是，触发校验时，被隐藏的组件值依然会进行校验。
+
 ### required
 
 `boolean` 类型，表示字段值是否为必须值，不填表示非必须

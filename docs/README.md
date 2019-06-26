@@ -4,8 +4,10 @@ heroImage: /logo.png
 actionText: Getting Started →
 actionLink: /getting-started/
 meta:
-- name: keywords
-content: vue dynamic nested form component
+  - name: keywords
+    content: vue dynamic nested form component
+  - name: google-site-verification
+    content: -lX8u-MYYDkf5y6QhZWJqZoDxVkmAu004XwR3ynRwFg
 features:
 - title: Generate form by descriptors
   details: Write only data's descriptor(extend from async-validate), then automatically generate form(use element-ui)

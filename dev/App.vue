@@ -3,11 +3,11 @@
     <dynamic-form
       v-model="data"
       ref="dynamic-form"
-      lang="zh_CN"
+      :languages="languages"
       :descriptors="descriptors">
       <template slot="operations">
-        <el-button @click="reset">重置</el-button>
-        <el-button type="primary" @click="validate" plain>校验</el-button>
+        <el-button @click="reset">Reset</el-button>
+        <el-button type="primary" @click="validate" plain>Validate</el-button>
       </template>
     </dynamic-form>
   </div>
@@ -27,7 +27,21 @@ export default {
   data () {
     return {
       data: {},
-      descriptors
+      descriptors,
+      languages: {
+        en_US: {
+          addKeyPlaceholder: 'just for test',
+          addKeyButtonText: 'Add',
+          addArrayItemButtonText: 'Add'
+        }
+      }
+    }
+  },
+  watch: {
+    'data.string' (value) {
+      if (value) {
+        this.descriptors.object.fields.string.hidden = true
+      }
     }
   },
   methods: {
@@ -46,5 +60,8 @@ export default {
 html, body {
   margin: 0;
   padding: 0;
+}
+#app {
+  padding: 20px;
 }
 </style>
