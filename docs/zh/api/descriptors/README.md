@@ -1,6 +1,6 @@
 # descriptors
 
-**descriptors** 基于 [async-validator](https://github.com/yiminghe/async-validator) 扩展。只需要按照规则编写 **descriptors**，**VueDynamicFormComponent** 就会自动生成对应的表单元素（表单组件基于 [element-ui](https://element.faas.ele.me)）。
+**descriptors** 基于 [async-validator](https://github.com/yiminghe/async-validator) 扩展。只需要按照规则编写 **descriptors**，**vue-dynamic-form-component** 就会自动生成对应的表单元素（表单组件基于 [element-ui](https://element.faas.ele.me)）。
 
 **descriptors** 的格式为：`{ <key>: <descriptor> }`，其中，**descriptor** 可以是对象或者数组。
 
@@ -50,13 +50,13 @@
 
 `Regexp` 类型，字段值必须符合该正则表达式
 
-###min | max
+### min | max
 
 `number` 类型，适用于 `string`, `array`, `number` 类型
 
 对于 `string` 或 `array` ，字段值的 `length` 必须介于 `min` 和 `max` 之间，对于 `number` 类型，值必须介于 `min` 和 `max` 之间
 
-###len
+### len
 
 精准匹配字段值的长度或大小，规则类似 `min | max`，`len` 优先级高于 `min | max`
 

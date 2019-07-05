@@ -1,7 +1,7 @@
 # 快速上手
 
 ::: tip 温馨提示
-VueDynamicFormComponent只能在[Vue](https://vuejs.org/)框架中使用，请提前安装好Vue依赖
+vue-dynamic-form-component只能在[Vue](https://vuejs.org/)框架中使用，请提前安装好Vue依赖
 :::
 
 ## 安装

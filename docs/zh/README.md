@@ -5,7 +5,7 @@ actionText: 快速开始 →
 actionLink: /zh/getting-started/
 meta:
 - name: keywords
-  content: vue 动态 嵌套 表单 多级 组件
+  content: vue 动态 嵌套 表单 多级 组件  vue-dynamic-form vue-dynamic-form-component
 features:
 - title: 使用descriptors生成表单
   details: 只需要提供目标数据的descriptor(基于async-validator扩展)，就可以自动生成对应的表单元素(基于element-ui)
