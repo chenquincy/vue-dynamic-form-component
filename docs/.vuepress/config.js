@@ -5,12 +5,12 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'VueDynamicForm',
+      title: 'vue-dynamic-form-component',
       description: 'Vue dynamic nested form component. Support nested Object/Hashmap/Array.'
     },
     '/zh/': {
       lang: 'zh-CN',
-      title: 'VueDynamicForm',
+      title: 'vue-dynamic-form-component',
       description: 'Vue动态嵌套表单组件，支持嵌套对象/Hashmap/数组'
     }
   },
