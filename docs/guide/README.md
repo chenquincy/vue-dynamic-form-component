@@ -1,6 +1,6 @@
 # Introduction
 
-**VueDynamicFormComponent** is a dynamic form component base on [element-ui](https://element.faas.ele.me/#/zh-CN) and [async-validator](https://github.com/yiminghe/async-validator) , support nested Object/Hashmap/Array. You just need to write **descriptors**(reference to [async-validator](https://github.com/yiminghe/async-validator)) of the data you want, **VueDynamicFormComponent** will generate the form automatically.
+**vue-dynamic-form-component** is a dynamic form component base on [element-ui](https://element.faas.ele.me/#/zh-CN) and [async-validator](https://github.com/yiminghe/async-validator) , support nested Object/Hashmap/Array. You just need to write **descriptors**(reference to [async-validator](https://github.com/yiminghe/async-validator)) of the data you want, **vue-dynamic-form-component** will generate the form automatically.
 
 ## Features
 
@@ -12,7 +12,7 @@
 
 ## Todo
 
-VueDynamicFormComponent can do more. There are a few things that it currently doesn't support but are planned:
+vue-dynamic-form-component can do more. There are a few things that it currently doesn't support but are planned:
 
 - Support more component
 - Custom theme

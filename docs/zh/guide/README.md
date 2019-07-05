@@ -1,6 +1,6 @@
 # 介绍
 
-**VueDynamicFormComponent** 是一个基于 [element-ui](https://element.faas.ele.me/#/zh-CN) 和 [async-validator](https://github.com/yiminghe/async-validator) 实现的动态表单组件，支持嵌套Object/Hashmap/Array。只需要提供数据的描述器（参考[async-validator](https://github.com/yiminghe/async-validator)的descriptor），**VueDynamicFormComponent**就会自动生成对应的表单元素。
+**vue-dynamic-form-component** 是一个基于 [element-ui](https://element.faas.ele.me/#/zh-CN) 和 [async-validator](https://github.com/yiminghe/async-validator) 实现的动态表单组件，支持嵌套Object/Hashmap/Array。只需要提供数据的描述器（参考[async-validator](https://github.com/yiminghe/async-validator)的descriptor），**vue-dynamic-form-component**就会自动生成对应的表单元素。
 
 
 
@@ -16,7 +16,7 @@
 
 ## Todo
 
-VueDynamicFormComponent还可以做到更多，这里有一些还未支持但是已经在计划中的功能:
+vue-dynamic-form-component还可以做到更多，这里有一些还未支持但是已经在计划中的功能:
 
 - 支持更多组件
 - 自定义样式

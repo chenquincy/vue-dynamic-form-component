@@ -1,7 +1,7 @@
 # Getting Started
 
 ::: tip Warm Prompt
-VueDynamicFormComponent should use with [Vue](https://vuejs.org/), please install Vue first.
+vue-dynamic-form-component should use with [Vue](https://vuejs.org/), please install Vue first.
 :::
 
 ## Installation

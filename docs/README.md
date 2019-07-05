@@ -5,7 +5,7 @@ actionText: Getting Started →
 actionLink: /getting-started/
 meta:
   - name: keywords
-    content: vue dynamic nested form component
+    content: vue dynamic nested form component vue-dynamic-form vue-dynamic-form-component
   - name: google-site-verification
     content: -lX8u-MYYDkf5y6QhZWJqZoDxVkmAu004XwR3ynRwFg
 features:
