@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.2](https://github.com/chenquincy/vue-dynamic-form-component/compare/v1.1.1...v1.1.2) (2019-07-17)
+
+
+### Bug Fixes
+
+* lodash version upgrade(security issue) ([8f1f31b](https://github.com/chenquincy/vue-dynamic-form-component/commit/8f1f31b))
+
+
+
 ## [1.1.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v1.1.0...v1.1.1) (2019-06-27)
 
 
