@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v1.1.2...v2.0.0) (2019-08-02)
+
+
+### Features
+
+* change vue, element-ui to externals. ([5c46661](https://github.com/chenquincy/vue-dynamic-form-component/commit/5c46661)), closes [#1](https://github.com/chenquincy/vue-dynamic-form-component/issues/1)
+
+
+### BREAKING CHANGES
+
+* The default languages change to zh_CN from en_US;Should import vue and element-ui
+yourself.
+
+
+
 ## [1.1.2](https://github.com/chenquincy/vue-dynamic-form-component/compare/v1.1.1...v1.1.2) (2019-07-17)
 
 
