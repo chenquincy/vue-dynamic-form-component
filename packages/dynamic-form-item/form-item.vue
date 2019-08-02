@@ -105,7 +105,6 @@
 </template>
 
 <script>
-import { FormItem, Input, Button } from 'element-ui'
 import { isComplexType, getLabelWidth, darkenColor, parseDescriptor, findTypeDescriptor } from '../utils'
 import DynamicInput from '../dynamic-input/input'
 import i18n from '../i18n'
@@ -168,9 +167,6 @@ export default {
     languages: Object
   },
   components: {
-    ElFormItem: FormItem,
-    ElInput: Input,
-    ElButton: Button,
     DynamicInput
   },
   computed: {
