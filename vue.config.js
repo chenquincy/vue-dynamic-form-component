@@ -9,5 +9,10 @@ module.exports = {
       template: 'public/index.html',
       filename: 'index.html'
     }
+  },
+  configureWebpack: config => {
+    if (process.env.NODE_ENV === 'production') {
+      config.externals = ['vue', 'Vue', 'element-ui', 'ElementUI']
+    }
   }
 }

@@ -1,10 +1,22 @@
 # 快速上手
 
 ::: tip 温馨提示
-vue-dynamic-form-component只能在[Vue](https://vuejs.org/)框架中使用，请提前安装好Vue依赖
+vue-dynamic-form-component 依赖于 [Vue](https://vuejs.org/) 和 [element-ui]([https://element.faas.ele.me)，请提前安装
 :::
 
 ## 安装
+
+### CDN
+
+目前可以通过 [unpkg.com/vue-dynamic-form-component](https://unpkg.com/vue-dynamic-form-component/) 获取最新版本的资源，使用示例：
+
+<<<@/docs/.vuepress/demos/cdn.html
+
+
+
+### NPM
+
+推荐使用 npm 的方式安装，它能更好地和 [webpack](https://webpack.js.org/) 打包工具配合使用。
 
 ``` bash
 # yarn
@@ -21,12 +33,19 @@ npm install vue-dynamic-form-component
 
 ``` js
 import Vue from 'Vue'
-import DynamicForm from 'vue-dynamic-form-component'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 
+import DynamicForm from 'vue-dynamic-form-component'
 Vue.use(DynamicForm)
 ```
 
 ### 组件内注册
+
+::: tip 温馨提示
+不要忘记提前注册  [element-ui]([https://element.faas.ele.me)
+:::
 
 ``` vue
 <script>

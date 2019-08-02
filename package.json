@@ -1,6 +1,6 @@
 {
   "name": "vue-dynamic-form-component",
-  "version": "1.1.2",
+  "version": "2.0.0",
   "license": "MIT",
   "author": {
     "email": "mail@quincychen.cn",
@@ -19,7 +19,8 @@
   },
   "main": "./lib/vue-dynamic-form-component.umd.min.js",
   "peerDependencies": {
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "element-ui": "^2.11.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
@@ -27,8 +28,7 @@
     "@vue/cli-service": "^3.8.0",
     "@vue/eslint-config-standard": "^4.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-plugin-component": "^1.1.1",
-    "element-ui": "2.7.2",
+    "element-ui": "^2.11.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",

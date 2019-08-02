@@ -1,10 +1,22 @@
 # Getting Started
 
 ::: tip Warm Prompt
-vue-dynamic-form-component should use with [Vue](https://vuejs.org/), please install Vue first.
+vue-dynamic-form-component should use with [Vue](https://vuejs.org/) and  [element-ui]([https://element.faas.ele.me), please install them first.
 :::
 
 ## Installation
+
+### CDN
+
+Get the latest version from [unpkg.com/vue-dynamic-form-component](https://unpkg.com/vue-dynamic-form-component/), and import the javascript file in your page.
+
+<<<@/docs/.vuepress/demos/cdn.html
+
+
+
+### NPM
+
+Installing with npm is recommended and it works seamlessly with [webpack](https://webpack.js.org/).
 
 ``` bash
 # yarn
@@ -13,18 +25,27 @@ yarn add vue-dynamic-form-component
 npm install vue-dynamic-form-component
 ```
 
+
+
 ## Registration
 
 ### Global Registered
 
 ``` js
 import Vue from 'Vue'
-import DynamicForm from 'vue-dynamic-form-component'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(ElementUI)
 
+import DynamicForm from 'vue-dynamic-form-component'
 Vue.use(DynamicForm)
 ```
 
 ### Registered in Component
+
+::: tip Warm Prompt
+Don't forget to register the [element-ui]([https://element.faas.ele.me) first.
+:::
 
 ``` vue
 <script>

@@ -22,7 +22,7 @@ module.exports = {
         selectText: 'Languages',
         label: 'English',
         sidebar: [
-          { title: 'Guide', collapsable: false, children: ['/guide/', '/getting-started/'] },
+          { title: 'Guide', collapsable: false, children: ['/guide/', '/getting-started/', '/i18n/'] },
           { title: 'API', collapsable: false, children: ['/api/dynamic-form/', '/api/descriptors/'] }
         ]
       },
@@ -30,13 +30,14 @@ module.exports = {
         selectText: '语言',
         label: '简体中文',
         sidebar: [
-          { title: '指南', collapsable: false, children: ['/zh/guide/', '/zh/getting-started/'] },
+          { title: '指南', collapsable: false, children: ['/zh/guide/', '/zh/getting-started/', '/zh/i18n/'] },
           { title: 'API', collapsable: false, children: ['/zh/api/dynamic-form/', '/zh/api/descriptors/'] }
         ]
       }
     },
     nav: [
-      { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form-component' }
+      { text: 'GitHub', link: 'https://github.com/chenquincy/vue-dynamic-form-component' },
+      { text: 'v1.x', link: 'https://vue-dynamic-form.v1.quincychen.cn' }
     ]
   },
   plugins: {

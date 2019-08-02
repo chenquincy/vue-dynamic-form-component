@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import { Form, FormItem } from 'element-ui'
 import DynamicFormItem from '../dynamic-form-item/form-item'
 import { isComplexType, getLabelWidth, findTypeDescriptor } from '../utils'
 
@@ -40,8 +39,7 @@ export default {
     },
     lang: {
       type: String,
-      default: 'en_US',
-      validator: val => ['en_US', 'zh_CN'].includes(val)
+      default: 'zh_CN'
     },
     /**
      * custom languages, format refer to packages/i18n.js
@@ -84,8 +82,6 @@ export default {
     }
   },
   components: {
-    ElForm: Form,
-    ElFormItem: FormItem,
     DynamicFormItem
   },
   computed: {

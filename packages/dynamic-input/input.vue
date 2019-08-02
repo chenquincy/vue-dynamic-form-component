@@ -19,16 +19,6 @@
 </template>
 
 <script>
-import {
-  Button,
-  DatePicker,
-  Input,
-  InputNumber,
-  Option,
-  Switch,
-  Select
-} from 'element-ui'
-
 const TYPE_COMPONENT_MAP = {
   string: 'el-input',
   number: 'el-input-number',
@@ -67,15 +57,7 @@ export default {
      */
     extend: Object
   },
-  components: {
-    ElInput: Input,
-    ElInputNumber: InputNumber,
-    ElSwitch: Switch,
-    ElSelect: Select,
-    ElOption: Option,
-    ElDatePicker: DatePicker,
-    ElButton: Button
-  },
+  components: {},
   computed: {
     _value: {
       get () {
