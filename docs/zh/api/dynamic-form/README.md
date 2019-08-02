@@ -5,7 +5,7 @@
 | 参数            | 说明                                                         | 类型   | 可选值            | 默认值 | 必传 |
 | --------------- | ------------------------------------------------------------ | ------ | ----------------- | ------ | ---- |
 | value           | 表单数据对象                                                 | object |                   |        | 是   |
-| lang            | 显示语言                                                     | string | en_US,zh_CN       | en_US  |      |
+| lang            | 显示语言                                                     | string | en_US,zh_CN       | zh_CN  |      |
 | languages       | 自定义语言包                                                 | object |                   |        |      |
 | descriptors     | 表单数据对象的描述器，详见 [descriptor](/zh/api/descriptors/) | object |                   |        | 是   |
 | size            | 表单组件元素的大小                                           | string | medium,small,mini | small  |      |
