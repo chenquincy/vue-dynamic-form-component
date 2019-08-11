@@ -19,8 +19,8 @@
   },
   "main": "./lib/vue-dynamic-form-component.umd.min.js",
   "peerDependencies": {
-    "vue": "^2.6.10",
-    "element-ui": "^2.11.1"
+    "element-ui": "^2.11.1",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",

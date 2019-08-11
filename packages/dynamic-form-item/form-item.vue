@@ -1,11 +1,12 @@
 <template>
   <el-form-item
     v-show="!descriptor.hidden"
-    :ref="prop"
     class="dynamic-form-item"
+    :ref="prop"
     :label="labelWidth === '0px' ? '' : (label || prop)"
     :prop="prop"
     :size="size"
+    :language="language"
     :rules="descriptor"
     :required="typeDescriptor.required"
     :label-width="labelWidth">
@@ -34,8 +35,7 @@
             :label="(findTypeDescriptor(_descriptor)).label || key"
             :prop="prop ? prop + '.' + key : key"
             :descriptor="_descriptor"
-            :lang="lang"
-            :languages="languages"
+            :language="language"
             :label-width="getLabelWidth(typeDescriptor.fields, fontSize)"
             :background-color="subFormBackgroundColor">
           </dynamic-form-item>
@@ -54,8 +54,7 @@
             :prop="prop ? prop + '.' + key : key"
             :deletable="true"
             :descriptor="typeDescriptor.defaultField"
-            :lang="lang"
-            :languages="languages"
+            :language="language"
             :label-width="getLabelWidth(_value, fontSize)"
             :background-color="subFormBackgroundColor"
             @delete="deleteKey(key)">
@@ -88,8 +87,7 @@
             :prop="prop ? prop + '.' + key : key"
             :deletable="true"
             :descriptor="typeDescriptor.defaultField"
-            :lang="lang"
-            :languages="languages"
+            :language="language"
             label-width="0px"
             :background-color="subFormBackgroundColor"
             @delete="deleteItem(key)">
@@ -107,7 +105,6 @@
 <script>
 import { isComplexType, getLabelWidth, darkenColor, parseDescriptor, findTypeDescriptor } from '../utils'
 import DynamicInput from '../dynamic-input/input'
-import i18n from '../i18n'
 
 export default {
   name: 'dynamic-form-item',
@@ -160,11 +157,7 @@ export default {
       default: false
     },
     labelWidth: String,
-    lang: {
-      type: String,
-      default: 'en_US'
-    },
-    languages: Object
+    language: Object
   },
   components: {
     DynamicInput
@@ -183,9 +176,6 @@ export default {
     },
     subFormBackgroundColor () {
       return this.bgColorOffset ? darkenColor(this.backgroundColor, this.bgColorOffset) : 'none'
-    },
-    language () {
-      return this.languages ? this.languages[this.lang] : i18n[this.lang]
     }
   },
   data () {

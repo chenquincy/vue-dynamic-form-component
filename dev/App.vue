@@ -3,7 +3,7 @@
     <dynamic-form
       v-model="data"
       ref="dynamic-form"
-      :languages="languages"
+      lang="en_US"
       :descriptors="descriptors">
       <template slot="operations">
         <el-button @click="reset">Reset</el-button>
@@ -27,14 +27,7 @@ export default {
   data () {
     return {
       data: {},
-      descriptors,
-      languages: {
-        en_US: {
-          addKeyPlaceholder: 'just for test',
-          addKeyButtonText: 'Add',
-          addArrayItemButtonText: 'Add'
-        }
-      }
+      descriptors
     }
   },
   watch: {
