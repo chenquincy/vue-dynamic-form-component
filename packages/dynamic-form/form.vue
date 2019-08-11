@@ -14,7 +14,7 @@
         :prop="key"
         :label-width="labelWidth"
         :descriptor="descriptor"
-        :languages="languages"
+        :language="language"
         :size="size"
         :background-color="backgroundColor"
         :bg-color-offset="bgColorOffset">
@@ -29,6 +29,7 @@
 <script>
 import DynamicFormItem from '../dynamic-form-item/form-item'
 import { isComplexType, getLabelWidth, findTypeDescriptor } from '../utils'
+import i18n from '../i18n'
 
 export default {
   name: 'dynamic-form',
@@ -102,10 +103,15 @@ export default {
         backgroundColor: this.backgroundColor
       }
       return style
+    },
+    language () {
+      return (this.languages || i18n)[this.lang]
     }
   },
   data () {
-    return {}
+    return {
+      i18n
+    }
   },
   created () {
     this.init()

@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.0.0...v2.0.1) (2019-08-11)
+
+
+### Bug Fixes
+
+* fix language setting and docs import element-ui error. ([1522330](https://github.com/chenquincy/vue-dynamic-form-component/commit/1522330))
+
+
+
+# Change Log
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
 # [2.0.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v1.1.2...v2.0.0) (2019-08-02)
 
 
