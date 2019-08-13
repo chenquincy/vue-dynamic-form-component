@@ -18,6 +18,7 @@
     "docs:build": "vuepress build docs"
   },
   "main": "./lib/vue-dynamic-form-component.umd.min.js",
+  "typings": "types/index.d.ts",
   "peerDependencies": {
     "element-ui": "^2.11.1",
     "vue": "^2.6.10"
