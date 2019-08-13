@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.1.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.0.1...v2.1.0) (2019-08-13)
+
+
+### Features
+
+* add d.ts file ([96168b1](https://github.com/chenquincy/vue-dynamic-form-component/commit/96168b1))
+
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.0.0...v2.0.1) (2019-08-11)
 
