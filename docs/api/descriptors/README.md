@@ -9,7 +9,7 @@
 ## descriptor
 
 ::: tip Warm Prompt
-**descriptor** can be `object` or `array`, but the `fields`, `defaultFields`, `label`, `placeholder`, `disabled`, `options`  props should be brother props with `type`. In addition, there is only one object include `type` prop in array.
+**descriptor** can be `object` or `array`, but the `fields`, `defaultFields`, `label`, `placeholder`, `hidden`, `disabled`, `options`, `autocomplete`  props should be brother props with `type`. In addition, there is only one object include `type` prop in array.
 :::
 
 ### type
@@ -43,6 +43,14 @@
 ### hidden
 
 `boolean` , whether hidden the input component of value, should be declared with `type` in the same object. Note that the hidden value still will be validated while validating.
+
+### disabled
+
+`boolean` , whether the input component is editable, should be declared with `type` in the same object. 
+
+### autocomplete
+
+same as `autocomplete` in native input, the default value is `off`
 
 ### required
 

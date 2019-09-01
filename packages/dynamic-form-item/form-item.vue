@@ -17,6 +17,7 @@
       :disabled="typeDescriptor.disabled"
       :type="typeDescriptor.type"
       :extend="{ options: typeDescriptor.options || typeDescriptor.enum }"
+      :autocomplete="typeDescriptor.autocomplete"
       :placeholder="typeDescriptor.placeholder">
     </dynamic-input>
     <!-- complex type, object or array -->

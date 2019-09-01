@@ -1,5 +1,5 @@
 export default {
-  string: { type: 'string', required: true },
+  string: { type: 'string', required: true, autocomplete: 'on' },
   url: { type: 'url', message: 'The url must be an url' },
   object: {
     type: 'object',
