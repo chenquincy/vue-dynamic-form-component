@@ -2,12 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# [2.1.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.0.1...v2.1.0) (2019-08-13)
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.1.0...v2.2.0) (2019-09-01)
 
 
 ### Features
 
-* add d.ts file ([96168b1](https://github.com/chenquincy/vue-dynamic-form-component/commit/96168b1))
+* support autocomplete ([07c91da](https://github.com/chenquincy/vue-dynamic-form-component/commit/07c91da))
 
 
 

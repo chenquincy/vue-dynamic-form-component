@@ -7,7 +7,7 @@
 ## descriptor
 
 ::: warning 注意
-**descriptor** 可以是对象或者数组，但是，当 **descriptor** 为数组时，与数据类型定义有关的属性（ `fields`、`defaultFields`）和扩展属性（`label`、`placehodler`、`disabled`、`options`） 需和 `type` 属性在同一对象中，并且数组中有且仅有一个包含 `type` 属性的对象。
+**descriptor** 可以是对象或者数组，但是，当 **descriptor** 为数组时，与数据类型定义有关的属性（ `fields`、`defaultFields`）和扩展属性（`label`、`placeholder`、`hidden`、`disabled`、`options`、`autocomplete`） 需和 `type` 属性在同一对象中，并且数组中有且仅有一个包含 `type` 属性的对象。
 :::
 
 ### type
@@ -41,6 +41,14 @@
 ### hidden
 
 `boolean` 类型，是否隐藏对应的输入组件，需和 `type` 在同一个对象中。需要注意的是，触发校验时，被隐藏的组件值依然会进行校验。
+
+### disabled
+
+`boolean` 类型，对应的输入组件是否不可编辑，需和 `type` 在同一个对象中。
+
+### autocomplete
+
+input 组件原生属性，自动补全，可选值: `on`, `off`，默认为 `off`
 
 ### required
 
