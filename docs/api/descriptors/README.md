@@ -24,7 +24,7 @@
 | `regexp`  | Must be an instance of `RegExp` or a string that does not generate an exception when creating a new `RegExp`. | `el-input`          |
 | `integer` | Must be of type `number` and an integer.                     | `el-input`          |
 | `float`   | Must be of type `number` and a floating point number.        | `el-input`          |
-| `enum`    | Value must exist in the `enum`. Can be used with `enum` and `options` | `el-select`         |
+| `enum`    | Value must exist in the `enum`. Can be used with [enum, options](/api/descriptors/#enum-options) | `el-select`         |
 | `date`    | Value must be valid as determined by `Date`                  | `el-date-picker`    |
 | `url`     | Must be of type `url`                                        | `el-input`          |
 | `hex`     | Must be of type `hex`                                        | `el-input`          |

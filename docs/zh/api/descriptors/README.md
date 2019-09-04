@@ -22,7 +22,7 @@
 | `regexp`  | 正则表达式，必须是可以正确转化为 `RegExp` 实例的字符串       | `el-input`          |
 | `integer` | `number` 类型的整数，自动添加 `.number` 修饰符               | `el-input`          |
 | `float`   | `number` 类型的浮点数，自动添加 `.number` 修饰符             | `el-input`          |
-| `enum`    | 枚举类型，需要和 [enum, options](/zh/api/descriptor#enum, options) 配合使用，值必须是 `enum` 数组中的一个 | `el-select`         |
+| `enum`    | 枚举类型，需要和 [enum, options](/zh/api/descriptors/#enum-options) 属性配合使用，值必须是 `enum` 数组中的一个 | `el-select`         |
 | `date`    | 必须是合法的 `Date` 对象                                     | `el-date-picker`    |
 | `url`     | 符合链接格式的字符串                                         | `el-input`          |
 | `hex`     | 符合哈希格式的字符串                                         | `el-input`          |
@@ -36,7 +36,7 @@
 
 ### placeholder
 
-`string` 类型，对应输入组件的placeholder值，需和 `type` 在同一个对象中，`type === 'object' | 'array'` 时无效
+`string` 类型，对应输入组件的 placeholder 值，需和 `type` 在同一个对象中，`type === 'object' | 'array'` 时无效
 
 ### hidden
 
