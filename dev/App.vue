@@ -34,6 +34,8 @@ export default {
     'data.string' (value) {
       if (value) {
         this.descriptors.object.fields.string.hidden = true
+      } else {
+        this.descriptors.object.fields.string.hidden = false
       }
     }
   },
