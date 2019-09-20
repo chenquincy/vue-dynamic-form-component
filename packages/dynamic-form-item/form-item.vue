@@ -14,11 +14,7 @@
       v-if="!isComplexType(typeDescriptor.type)"
       v-model="_value"
       :size="size"
-      :disabled="typeDescriptor.disabled"
-      :type="typeDescriptor.type"
-      :extend="{ options: typeDescriptor.options || typeDescriptor.enum }"
-      :autocomplete="typeDescriptor.autocomplete"
-      :placeholder="typeDescriptor.placeholder">
+      :descriptor="typeDescriptor">
     </dynamic-input>
     <!-- complex type, object or array -->
     <template v-else>
@@ -74,10 +70,7 @@
           <dynamic-input
             v-model="_value"
             :size="size"
-            :disabled="typeDescriptor.defaultField.disabled"
-            :type="typeDescriptor.defaultField.type"
-            :extend="{ multiple: typeDescriptor.defaultField.multiple, options: typeDescriptor.defaultField.options || typeDescriptor.defaultField.enum }"
-            :placeholder="typeDescriptor.defaultField.placeholder">
+            :descriptor="typeDescriptor.defaultField">
           </dynamic-input>
         </div>
         <div v-else class="sub-dynamic-form array" :style="{backgroundColor: subFormBackgroundColor}">
@@ -147,7 +140,7 @@ export default {
       default: '#FFFFFF'
     },
     /**
-     * darken sub-form's background-color with offset while get positive integer
+     * darken sub-form's background-color with offset if got positive integer
      */
     bgColorOffset: {
       type: Number,

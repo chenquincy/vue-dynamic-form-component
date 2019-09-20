@@ -7,6 +7,7 @@
     "name": "quincychen",
     "url": "https://quincychen.cn"
   },
+  "keywords": ["vue", "dynamic", "form", "component"],
   "repository": {
     "type": "github",
     "url": "https://github.com/chenquincy/vue-dynamic-form-component"

@@ -2,21 +2,43 @@
   <component
     class="dynamic-input"
     v-model="_value"
-    v-if="!isSpecialType(type)"
+    v-if="!isSpecialType"
     :is="name"
     :size="size"
-    :disabled="disabled"
-    :autocomplete="autocomplete"
-    :placeholder="placeholder">
+    :disabled="descriptor.disabled"
+    :autocomplete="descriptor.autocomplete"
+    :placeholder="descriptor.placeholder">
   </component>
   <!-- integer, number, float type use el-input with v-model.number -->
-  <el-input v-else-if="['integer', 'number', 'float'].includes(type)" v-model.number="_value" :size="size" :disabled="disabled" :placeholder="placeholder" :autocomplete="autocomplete"></el-input>
+  <el-input
+    v-else-if="['integer', 'number', 'float'].includes(descriptor.type)"
+    v-model.number="_value"
+    :size="size"
+    :disabled="descriptor.disabled"
+    :placeholder="descriptor.placeholder"
+    :autocomplete="descriptor.autocomplete">
+  </el-input>
   <!-- enum type use el-select -->
-  <el-select v-else-if="type === 'enum'" class="dynamic-input" v-model="_value" :size="size" :disabled="disabled" :placeholder="placeholder" :multiple="extend && extend.multiple">
+  <el-select
+    v-else-if="descriptor.type === 'enum'"
+    class="dynamic-input"
+    v-model="_value"
+    :size="size"
+    :disabled="descriptor.disabled"
+    :placeholder="descriptor.placeholder"
+    :multiple="descriptor && descriptor.multiple">
     <el-option v-for="option in _options" :key="option.label" :value="option.value" :label="option.label" :disabled="option.disabled"></el-option>
   </el-select>
   <!-- date type use el-date-picker -->
-  <el-date-picker v-else-if="type === 'date'" class="dynamic-input" v-model="_value" :size="size" :disabled="disabled" type="datetime" :placeholder="placeholder"></el-date-picker>
+  <el-date-picker
+    v-else-if="descriptor.type === 'date'"
+    class="dynamic-input"
+    type="datetime"
+    v-model="_value"
+    :size="size"
+    :disabled="descriptor.disabled"
+    :placeholder="descriptor.placeholder">
+  </el-date-picker>
 </template>
 
 <script>
@@ -38,29 +60,14 @@ export default {
     value: {
       required: true
     },
-    disabled: Boolean,
-    placeholder: String,
     size: {
       type: String,
       default: 'small'
     },
-    autocomplete: {
-      type: String,
-      default: 'off'
-    },
-    /**
-     * value type
-     * options: ['string', 'number', 'boolean', 'regexp', 'integer', 'float', 'enum', 'date', 'url', 'hex', 'email']
-     */
-    type: {
-      type: String,
+    descriptor: {
+      type: Object,
       required: true
-    },
-    /**
-     * extend options of component
-     * extends.options: [{ label: String, value: Any }] || [String] // select component's options
-     */
-    extend: Object
+    }
   },
   components: {},
   computed: {
@@ -73,8 +80,8 @@ export default {
       }
     },
     _options () {
-      if (this.extend && this.extend.options instanceof Array) {
-        return this.extend.options.map(item => {
+      if (this.descriptor && this.descriptor.options instanceof Array) {
+        return this.descriptor.options.map(item => {
           if (typeof item === 'string') {
             return { label: item, value: item }
           } else {
@@ -84,6 +91,9 @@ export default {
       } else {
         return []
       }
+    },
+    isSpecialType () {
+      return ['integer', 'float', 'number', 'enum', 'date'].includes(this.descriptor.type)
     }
   },
   data () {
@@ -97,9 +107,6 @@ export default {
   methods: {
     init () {
       this.name = TYPE_COMPONENT_MAP[this.type] || 'el-input'
-    },
-    isSpecialType (type) {
-      return ['integer', 'float', 'number', 'enum', 'date'].includes(type)
     }
   }
 }
