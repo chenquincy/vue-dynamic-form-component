@@ -36,21 +36,13 @@
 
 `string`, field's label in form, should be declared with `type` in the same object.
 
-### placeholder
+### props
 
-`string`, field component's placeholder prop, should be declared with `type` in the same object, invalid while `type === 'object' | 'array'`
+`object` type, it will be the value of input component's `v-bind` prop(input component refer to [descriptor.type](/api/descriptors/#type)). You can custom the component with this option, there are some common prop like: `placeholder`, `disabled`, ... , etc. Other props of component refer to [element-ui](https://element.faas.ele.me/#/en-US/component/installation).
 
 ### hidden
 
 `boolean` , whether hidden the input component of value, should be declared with `type` in the same object. Note that the hidden value still will be validated while validating.
-
-### disabled
-
-`boolean` , whether the input component is editable, should be declared with `type` in the same object. 
-
-### autocomplete
-
-same as `autocomplete` in native input, the default value is `off`
 
 ### required
 

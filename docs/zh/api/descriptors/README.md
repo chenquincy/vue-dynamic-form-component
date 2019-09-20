@@ -34,21 +34,13 @@
 
 `string` 类型，表单中对应字段的label值，需和 `type` 在同一个对象中
 
-### placeholder
+### props
 
-`string` 类型，对应输入组件的 placeholder 值，需和 `type` 在同一个对象中，`type === 'object' | 'array'` 时无效
+`object` 类型，通过 `v-bind` 绑定到对应的 element-ui 输入组件（对应组件查阅 [descriptor.type](/zh/api/descriptors/#type)），可以通过该选项进行一些自定义操作，常见的属性有：`placeholder`、`disabled` 等，其他属性请查阅 [element-ui](https://element.faas.ele.me/#/zh-CN/component/installation) 对应组件文档
 
 ### hidden
 
 `boolean` 类型，是否隐藏对应的输入组件，需和 `type` 在同一个对象中。需要注意的是，触发校验时，被隐藏的组件值依然会进行校验。
-
-### disabled
-
-`boolean` 类型，对应的输入组件是否不可编辑，需和 `type` 在同一个对象中。
-
-### autocomplete
-
-input 组件原生属性，自动补全，可选值: `on`, `off`，默认为 `off`
 
 ### required
 
