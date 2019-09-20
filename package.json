@@ -1,13 +1,18 @@
 {
   "name": "vue-dynamic-form-component",
-  "version": "2.2.0",
+  "version": "2.3.0",
   "license": "MIT",
   "author": {
     "email": "mail@quincychen.cn",
     "name": "quincychen",
     "url": "https://quincychen.cn"
   },
-  "keywords": ["vue", "dynamic", "form", "component"],
+  "keywords": [
+    "vue",
+    "dynamic",
+    "form",
+    "component"
+  ],
   "repository": {
     "type": "github",
     "url": "https://github.com/chenquincy/vue-dynamic-form-component"

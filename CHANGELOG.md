@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.3.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.2.0...v2.3.0) (2019-09-20)
+
+
+### Features
+
+* move component's props to descriptor.props ([d3a4bd9](https://github.com/chenquincy/vue-dynamic-form-component/commit/d3a4bd9)), closes [#6](https://github.com/chenquincy/vue-dynamic-form-component/issues/6)
+
+
+### BREAKING CHANGES
+
+* descriptor.disabled, descriptor.placeholder, descriptor.autocomplete are moved into
+descriptor.props.
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.1.0...v2.2.0) (2019-09-01)
 
