@@ -10,6 +10,7 @@
   <!-- integer, number, float type use el-input with v-model.number -->
   <el-input
     v-else-if="['integer', 'number', 'float'].includes(descriptor.type)"
+    class="dynamic-input"
     v-model.number="_value"
     v-bind="_bind"
     :size="size">
@@ -114,7 +115,7 @@ export default {
   },
   methods: {
     init () {
-      this.name = TYPE_COMPONENT_MAP[this.type] || 'el-input'
+      this.name = TYPE_COMPONENT_MAP[this.descriptor.type] || 'el-input'
     }
   }
 }
