@@ -5,6 +5,7 @@ export default {
     type: 'object',
     label: 'object label',
     fields: {
+      boolean: { type: 'boolean', required: true },
       string: { type: 'string', required: true, hidden: false },
       date: { type: 'date', required: true },
       url: { type: 'url', message: 'The url must be an url', props: { placeholder: 'please input the url' } }
