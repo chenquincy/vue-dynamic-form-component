@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.2](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.1...v2.3.2) (2019-10-28)
+
+
+### Bug Fixes
+
+* compatible enum type without descriptor.options ([5833ddf](https://github.com/chenquincy/vue-dynamic-form-component/commit/5833ddf))
+
+
+
 ## [2.3.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.0...v2.3.1) (2019-09-23)
 
 
