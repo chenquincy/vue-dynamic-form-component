@@ -76,12 +76,13 @@ export default {
       }
     },
     _options () {
-      if (this.descriptor && this.descriptor.options instanceof Array) {
-        return this.descriptor.options.map(item => {
-          if (typeof item === 'string') {
-            return { label: item, value: item }
-          } else {
+      if (this.descriptor.enum || this.descriptor.options) {
+        const data = this.descriptor.options instanceof Array ? this.descriptor.options : this.descriptor.enum
+        return data.map(item => {
+          if (typeof item === 'object') {
             return item
+          } else {
+            return { label: item, value: item }
           }
         })
       } else {
