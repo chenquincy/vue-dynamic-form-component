@@ -177,6 +177,14 @@ export default {
       hashMapKey: ''
     }
   },
+  watch: {
+    hashMapKey (val) {
+      // el-form-item's prop not support "."
+      if (val.indexOf('.') !== -1) {
+        this.hashMapKey = this.hashMapKey.replace(/\./g, '')
+      }
+    }
+  },
   created () {},
   methods: {
     isComplexType,
