@@ -1,5 +1,5 @@
 export default {
-  string: { type: 'string', required: true, disabled: true, placeholder: 'test', props: { autocomplete: 'on', type: 'textarea', rows: 4 } },
+  string: { type: 'string', required: true, disabled: true, placeholder: 'textarea placeholder', props: { autocomplete: 'on', type: 'textarea', rows: 4 } },
   url: { type: 'url', message: 'The url must be an url' },
   object: {
     type: 'object',

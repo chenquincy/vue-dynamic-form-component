@@ -2,16 +2,17 @@
 
 ## 属性
 
-| 参数            | 说明                                                         | 类型   | 可选值            | 默认值 | 必传 |
-| --------------- | ------------------------------------------------------------ | ------ | ----------------- | ------ | ---- |
-| value           | 表单数据对象                                                 | object |                   |        | 是   |
-| lang            | 显示语言                                                     | string | en_US,zh_CN       | zh_CN  |      |
-| languages       | 自定义语言包                                                 | object |                   |        |      |
-| descriptors     | 表单数据对象的描述器，详见 [descriptor](/zh/api/descriptors/) | object |                   |        | 是   |
-| size            | 表单组件元素的大小                                           | string | medium,small,mini | small  |      |
-| backgroundColor | 表单最外层背景                                               | string | 如：#FFFFFF       | none   |      |
-| fontSize        | 表单字体大小                                                 | number |                   | 14     |      |
-| bgColorOffset   | 不同层级表单的背景色偏移量                                   | number |                   | 8      |      |
+| 参数            | 说明                                                         | 类型    | 可选值            | 默认值 | 必传 |
+| --------------- | ------------------------------------------------------------ | ------- | ----------------- | ------ | ---- |
+| value           | 表单数据对象                                                 | object  |                   |        | 是   |
+| lang            | 显示语言                                                     | string  | en_US,zh_CN       | zh_CN  |      |
+| languages       | 自定义语言包                                                 | object  |                   |        |      |
+| descriptors     | 表单数据对象的描述器，详见 [descriptor](/zh/api/descriptors/) | object  |                   |        | 是   |
+| size            | 表单组件元素的大小                                           | string  | medium,small,mini | small  |      |
+| backgroundColor | 表单最外层背景                                               | string  | 如：#FFFFFF       | none   |      |
+| fontSize        | 表单字体大小                                                 | number  |                   | 14     |      |
+| bgColorOffset   | 不同层级表单的背景色偏移量                                   | number  |                   | 8      |      |
+| showOuterError  | 是否显示父组件的错误信息                                     | boolean |                   | true   |      |
 
 languages格式：
 
