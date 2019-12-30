@@ -10,14 +10,6 @@
 - Support data **validation**
 - **Multi-Languages** support
 
-## Todo
-
-vue-dynamic-form-component can do more. There are a few things that it currently doesn't support but are planned:
-
-- Support more component
-- Custom theme
-- value change event
-
 ## Question
 
 Please submit your question in [Github Issue](https://github.com/chenquincy/vue-dynamic-form-component/issues) .

@@ -188,7 +188,7 @@ export default {
 </script>
 
 <style lang="scss">
-// copy element's css avoid the nested error style
+// cover element's css avoid the nested error style
 .dynamic-form {
   .el-form-item.is-success, .add-key-input-group {
     .el-input__inner,
