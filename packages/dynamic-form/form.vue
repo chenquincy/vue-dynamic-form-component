@@ -17,7 +17,8 @@
         :language="language"
         :size="size"
         :background-color="backgroundColor"
-        :bg-color-offset="bgColorOffset">
+        :bg-color-offset="bgColorOffset"
+        :show-outer-error="showOuterError">
       </dynamic-form-item>
       <el-form-item v-if="$slots.operations" class="operations" :label-width="labelWidth">
         <slot name="operations"></slot>
@@ -73,6 +74,13 @@ export default {
     fontSize: {
       type: Number,
       default: 14
+    },
+    /**
+     * whether show parent component's error, default true
+     */
+    showOuterError: {
+      type: Boolean,
+      default: true
     },
     /**
      * darken sub-form's background-color with offset while get positive integer
@@ -179,5 +187,16 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+// cover element's css avoid the nested error style
+.dynamic-form {
+  .el-form-item.is-success, .add-key-input-group {
+    .el-input__inner,
+    .el-input__inner:focus,
+    .el-textarea__inner,
+    .el-textarea__inner:focus {
+      border-color: #DCDFE6;
+    }
+  }
+}
 </style>

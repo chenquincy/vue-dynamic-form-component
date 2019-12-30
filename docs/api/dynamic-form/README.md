@@ -2,15 +2,16 @@
 
 ## Props
 
-| prop            | description                                                  | type   | option values       | default | required |
-| --------------- | ------------------------------------------------------------ | ------ | ------------------- | ------- | -------- |
-| value           | form data                                                    | object |                     |         | yes      |
-| lang            | language                                                     | string | en_US,zh_CN         | zh_CN   |          |
-| descriptors     | descriptors of form data, refer to [descriptor](/zh/api/descriptors/) | object |                     |         | yes      |
-| size            | size of form component                                       | string | medium,small,mini   | small   |          |
-| backgroundColor | root form background color                                   | string | Hex color or 'none' | none    |          |
-| fontSize        | font size of form                                            | number |                     | 14      |          |
-| bgColorOffset   | form background color offset                                 | number |                     | 8       |          |
+| prop            | description                                                  | type    | option values       | default | required |
+| --------------- | ------------------------------------------------------------ | ------- | ------------------- | ------- | -------- |
+| value           | form data                                                    | object  |                     |         | yes      |
+| lang            | language                                                     | string  | en_US,zh_CN         | zh_CN   |          |
+| descriptors     | descriptors of form data, refer to [descriptor](/zh/api/descriptors/) | object  |                     |         | yes      |
+| size            | size of form component                                       | string  | medium,small,mini   | small   |          |
+| backgroundColor | root form background color                                   | string  | Hex color or 'none' | none    |          |
+| fontSize        | font size of form                                            | number  |                     | 14      |          |
+| bgColorOffset   | form background color offset                                 | number  |                     | 8       |          |
+| showOuterError  | whether show parent component's error                        | boolean |                     | true    |          |
 
 `languages` format：
 

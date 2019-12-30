@@ -44,6 +44,9 @@ module.exports = {
     'sitemap': {
       hostname: 'https://vue-dynamic-form.quincychen.cn',
       exclude: ['/404.html']
+    },
+    '@vuepress/plugin-google-analytics': {
+      ga: 'UA-145341224-1'
     }
   }
 }

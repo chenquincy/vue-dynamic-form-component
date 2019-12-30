@@ -4,7 +4,8 @@
       v-model="data"
       ref="dynamic-form"
       lang="en_US"
-      :descriptors="descriptors">
+      :descriptors="descriptors"
+      :show-outer-error="false">
       <template slot="operations">
         <el-button @click="reset">Reset</el-button>
         <el-button type="primary" @click="validate" plain>Validate</el-button>

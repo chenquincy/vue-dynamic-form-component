@@ -9,7 +9,8 @@
     :language="language"
     :rules="descriptor"
     :required="typeDescriptor.required"
-    :label-width="labelWidth">
+    :label-width="labelWidth"
+    :show-message="showOuterError || !isComplexType(typeDescriptor.type)">
     <dynamic-input
       v-if="!isComplexType(typeDescriptor.type)"
       v-model="_value"
@@ -145,6 +146,13 @@ export default {
     bgColorOffset: {
       type: Number,
       default: 8
+    },
+    /**
+     * whether show parent component's error, default true
+     */
+    showOuterError: {
+      type: Boolean,
+      default: true
     },
     deletable: {
       type: Boolean,

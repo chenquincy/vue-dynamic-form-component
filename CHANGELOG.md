@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.4.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.3...v2.4.0) (2019-12-30)
+
+
+### Features
+
+* support to hidden outer layer's error message ([2dc9344](https://github.com/chenquincy/vue-dynamic-form-component/commit/2dc9344))
+
+
+
 ## [2.3.3](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.2...v2.3.3) (2019-10-30)
 
 
