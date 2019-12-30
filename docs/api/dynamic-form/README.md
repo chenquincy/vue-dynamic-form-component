@@ -11,7 +11,7 @@
 | backgroundColor | root form background color                                   | string  | Hex color or 'none' | none    |          |
 | fontSize        | font size of form                                            | number  |                     | 14      |          |
 | bgColorOffset   | form background color offset                                 | number  |                     | 8       |          |
-| showOuterError  | whether show parent component's error, default true          | boolean |                     | true    |          |
+| showOuterError  | whether show parent component's error                        | boolean |                     | true    |          |
 
 `languages` format：
 

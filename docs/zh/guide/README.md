@@ -14,16 +14,6 @@
 
 
 
-## Todo
-
-vue-dynamic-form-component还可以做到更多，这里有一些还未支持但是已经在计划中的功能:
-
-- 支持更多组件
-- 自定义样式
-- 字段值变更事件
-
-
-
 ## 意见反馈
 
 请通过 [Github Issue](https://github.com/chenquincy/vue-dynamic-form-component/issues) 提交您的意见反馈
