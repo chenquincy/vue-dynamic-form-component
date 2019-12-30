@@ -2,7 +2,14 @@
 
 **vue-dynamic-form-component** is a dynamic form component base on [element-ui](https://element.faas.ele.me/#/zh-CN) and [async-validator](https://github.com/yiminghe/async-validator). You just need to write **descriptors**(reference to [async-validator](https://github.com/yiminghe/async-validator)) of the data you want, **vue-dynamic-form-component** will generate the form automatically.
 
-## Usage
+## Docs
+
+- [English Docs](http://vue-dynamic-form.quincychen.cn)
+- [中文文档](http://vue-dynamic-form.quincychen.cn/zh/)
+
+## Usage Example
+
+![vue-dynamic-form-component.gif](https://raw.githubusercontent.com/chenquincy/vue-dynamic-form-component/master/public/vue-dynamic-form-component.gif)
 
 ``` vue
 <template>
@@ -62,19 +69,12 @@ export default {
       this.$refs['dynamic-form'].resetFields()
     },
     validate () {
-			this.$refs['dynamic-form'].validate()
+      this.$refs['dynamic-form'].validate()
     }
   }
 }
 </script>
 ```
-
-![vue-dynamic-form-component.gif](https://raw.githubusercontent.com/chenquincy/vue-dynamic-form-component/master/public/vue-dynamic-form-component.gif)
-
-## Docs
-
-- [English Docs](http://vue-dynamic-form.quincychen.cn)
-- [中文文档](http://vue-dynamic-form.quincychen.cn/zh/)
 
 ## Features
 
