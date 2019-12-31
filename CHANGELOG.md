@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.4.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.4.0...v2.4.1) (2019-12-31)
+
+
+### Bug Fixes
+
+* loss nested form-item's show-outer-error prop ([9216a50](https://github.com/chenquincy/vue-dynamic-form-component/commit/9216a50))
+
+
+
 # [2.4.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.3...v2.4.0) (2019-12-30)
 
 
