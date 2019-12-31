@@ -35,7 +35,8 @@
             :descriptor="_descriptor"
             :language="language"
             :label-width="getLabelWidth(typeDescriptor.fields, fontSize)"
-            :background-color="subFormBackgroundColor">
+            :background-color="subFormBackgroundColor"
+            :show-outer-error="showOuterError">
           </dynamic-form-item>
         </div>
         <!-- hashmap object -->
@@ -55,6 +56,7 @@
             :language="language"
             :label-width="getLabelWidth(_value, fontSize)"
             :background-color="subFormBackgroundColor"
+            :show-outer-error="showOuterError"
             @delete="deleteKey(key)">
           </dynamic-form-item>
           <el-form-item>
@@ -85,6 +87,7 @@
             :language="language"
             label-width="0px"
             :background-color="subFormBackgroundColor"
+            :show-outer-error="showOuterError"
             @delete="deleteItem(key)">
           </dynamic-form-item>
           <div class="add-key-input-group">
