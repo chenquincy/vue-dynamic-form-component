@@ -83,16 +83,15 @@ export default {
 - Support **multi-level form** for `Object `/ `Array` / `Hashmap` 
 - Support data **validation**
 - **Multi-Languages** support
+- Support **custom component**
 
 ## Todo
 
 **vue-dynamic-form-component** can do more. There are a few things that it currently doesn't support but are planned:
 
 - [x] Custom component props
-- [ ] Custom component event
-- [ ] Support more component
-  - [x] textarea
-  - [ ] file upload
+- [x] Custom component event
+- [x] Custom component
 - [ ] Custom theme
 - [ ] Value change event
 

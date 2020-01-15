@@ -6,12 +6,12 @@ module.exports = {
     '/': {
       lang: 'en-US',
       title: 'vue-dynamic-form-component',
-      description: 'Vue dynamic nested form component. Support nested Object/Hashmap/Array.'
+      description: 'Vue dynamic nested form component. Support nested Object/Hashmap/Array. Can custom component yourself.'
     },
     '/zh/': {
       lang: 'zh-CN',
       title: 'vue-dynamic-form-component',
-      description: 'Vue动态嵌套表单组件，支持嵌套对象/Hashmap/数组'
+      description: 'Vue动态嵌套表单组件，支持嵌套对象/Hashmap/数组, 可自定义表单组件'
     }
   },
   themeConfig: {

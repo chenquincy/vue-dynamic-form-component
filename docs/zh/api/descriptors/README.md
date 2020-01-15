@@ -7,12 +7,16 @@
 ## descriptor
 
 ::: warning 注意
-**descriptor** 可以是对象或者数组，但是，当 **descriptor** 为数组时，与数据类型定义有关的属性（ `fields`、`defaultFields`）和扩展属性（`label`、`placeholder`、`hidden`、`disabled`、`options`、`autocomplete`） 需和 `type` 属性在同一对象中，并且数组中有且仅有一个包含 `type` 属性的对象。
+**descriptor** 可以是对象或者数组，但是，当 **descriptor** 为数组时，与数据类型定义有关的属性（ `fields`、`defaultFields`）和扩展属性（`label`、`hidden`、`disabled`、`options`、`component`） 需和 `type` 属性在同一对象中，并且数组中有且仅有一个包含 `type` 属性的对象。
 :::
 
 ### type
 
 `string` 类型，表示字段类型，包含常见的数据类型
+
+::: warning 注意
+[descriptor.component.name](/zh/api/descriptors/#props) 优先级更高，当 `descriptor.component.name` 不为空时，以下规则不生效
+:::
 
 | 值        | 说明                                                         | 对应组件            |
 | --------- | ------------------------------------------------------------ | ------------------- |
@@ -33,10 +37,6 @@
 ### label
 
 `string` 类型，表单中对应字段的label值，需和 `type` 在同一个对象中
-
-### props
-
-`object` 类型，通过 `v-bind` 绑定到对应的 element-ui 输入组件（对应组件查阅 [descriptor.type](/zh/api/descriptors/#type)），可以通过该选项进行一些自定义操作，常见的属性有：`placeholder`、`disabled` 等，其他属性请查阅 [element-ui](https://element.faas.ele.me/#/zh-CN/component/installation) 对应组件文档
 
 ### hidden
 
@@ -187,16 +187,56 @@ const descriptors = {
     { type: 'string', required: true },
     {
       validator: function (rule, value, callback) {
-      	if (value.length < 5) {
-    			return callback(new Error('name should logger than 5'))
-    		}
+        if (value.length < 5) {
+          return callback(new Error('name should logger than 5'))
+        }
         if (value.indexOf('/%$') !== -1) {
           return callback(new Error('name can not include /%$'))
         }
-				return callback()
-    	}
+        return callback()
+      }
     }
   ]
 }
 ```
 
+### component
+
+为了方便使用者自定义组件提供的选项，可以自定义组件内容、属性和事件。
+
+``` js
+// component 示例
+{
+  name: 'el-button',
+  props: {
+    type: 'primary',
+    size: 'small'
+  },
+  events: {
+    click () {
+      console.log('button click')
+    }
+  }
+}
+```
+
+#### name
+
+`string` 类型，自定义组件名或元素名
+
+#### props
+
+`object` 类型，当 `component.name` 为空时，通过 `v-bind` 绑定到对应的组件（对应组件查阅 [descriptor.type](/zh/api/descriptors/#type)），可以通过该选项进行属性自定义，常见的属性有：`placeholder`、`disabled` 等，其他对应组件属性请查阅 [element-ui](https://element.faas.ele.me/#/zh-CN/component/installation) 对应组件文档；当 `component.name` 不为空时，通过 `v-bind` 绑定到声明的组件上。
+
+#### events
+
+`object` 类型，当 `component.name` 为空时，通过 `v-on` 绑定到对应的组件（对应组件查阅 [descriptor.type](/zh/api/descriptors/#type)），可以通过该选项进行事件自定义，例如：`click`、`focus` 等，其他对应组件事件请查阅 [element-ui](https://element.faas.ele.me/#/zh-CN/component/installation) 对应组件文档；当 `component.name` 不为空时，通过 `v-on` 绑定到声明的组件上。
+
+#### children
+
+`children` 用于自定义组件内容，它有两种类型：
+
+- `string` ：表示内容为纯文本，使用 `span` 标签插入
+- `array[component | string]` : 表示组件内容有多个元素，数组元素有两种类型：
+  - `component` : 结构和 [component](/zh/api/descriptors/#component) 相同
+  - `string` ： 表示纯文本元素，使用 `span` 标签插入

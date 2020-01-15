@@ -4,8 +4,10 @@
     v-model="_value"
     v-if="!isSpecialType"
     v-bind="_bind"
-    :is="name"
+    v-on="_on"
+    :is="_name"
     :size="size">
+    <dynamic-component v-for="(component, index) in _children" :key="index" :component="component"></dynamic-component>
   </component>
   <!-- integer, number, float type use el-input with v-model.number -->
   <el-input
@@ -13,6 +15,7 @@
     class="dynamic-input"
     v-model.number="_value"
     v-bind="_bind"
+    v-on="_on"
     :size="size">
   </el-input>
   <!-- enum type use el-select -->
@@ -21,6 +24,7 @@
     class="dynamic-input"
     v-model="_value"
     v-bind="_bind"
+    v-on="_on"
     :class="{'multi-select': descriptor.multiple}"
     :size="size"
     :multiple="descriptor.multiple">
@@ -33,11 +37,14 @@
     type="datetime"
     v-model="_value"
     v-bind="_bind"
+    v-on="_on"
     :size="size">
   </el-date-picker>
 </template>
 
 <script>
+import DynamicComponent from '../dynamic-component'
+
 const TYPE_COMPONENT_MAP = {
   string: 'el-input',
   number: 'el-input-number',
@@ -65,7 +72,9 @@ export default {
       required: true
     }
   },
-  components: {},
+  components: {
+    DynamicComponent
+  },
   computed: {
     _value: {
       get () {
@@ -73,6 +82,13 @@ export default {
       },
       set (value) {
         this.$emit('input', value)
+      }
+    },
+    _name () {
+      if (!this.descriptor.component || !this.descriptor.component.name) {
+        return TYPE_COMPONENT_MAP[this.descriptor.type] || 'el-input'
+      } else {
+        return this.descriptor.component.name
       }
     },
     _options () {
@@ -93,32 +109,44 @@ export default {
       let data = {};
       /**
        * Compatible with the version <= 2.2.0
-       * These props is the first level prop of descriptor in old version
+       * These props is the first level props of descriptor in old version
        */
       ['disabled', 'placeholder', 'autocomplete'].forEach(key => {
         if (typeof this.descriptor[key] !== 'undefined') {
           data[key] = this.descriptor[key]
         }
       })
-      return Object.assign(data, this.descriptor.props)
+      const props = this.descriptor.component && this.descriptor.component.props
+        ? this.descriptor.component.props
+        : this.descriptor.props
+      return Object.assign(data, props)
+    },
+    _on () {
+      return this.descriptor.component && this.descriptor.component.events
+        ? this.descriptor.component.events
+        : (this.descriptor.events || {})
+    },
+    _children () {
+      if (!this.descriptor.component) {
+        return []
+      }
+      if (Array.isArray(this.descriptor.component.children)) {
+        return this.descriptor.component.children
+      }
+      if (typeof this.descriptor.component.children === 'string') {
+        return [this.descriptor.component.children]
+      }
+      return []
     },
     isSpecialType () {
       return ['integer', 'float', 'number', 'enum', 'date'].includes(this.descriptor.type)
     }
   },
   data () {
-    return {
-      name: ''
-    }
+    return {}
   },
-  created () {
-    this.init()
-  },
-  methods: {
-    init () {
-      this.name = TYPE_COMPONENT_MAP[this.descriptor.type] || 'el-input'
-    }
-  }
+  created () {},
+  methods: {}
 }
 </script>
 
