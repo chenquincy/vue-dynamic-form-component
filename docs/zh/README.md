@@ -7,7 +7,7 @@ meta:
 - name: keywords
   content: vue 动态 嵌套 表单 多级 组件  vue-dynamic-form vue-dynamic-form-component
 features:
-- title: 使用descriptors生成表单
+- title: 使用descriptors生成表单或自定义组件
   details: 只需要提供目标数据的descriptor(基于async-validator扩展)，就可以自动生成对应的表单元素(基于element-ui)
 - title: 支持绝大部分数据类型及其校验
   details: 支持绝大部分数据类型、常见类型校验（如：email、url等）

@@ -125,6 +125,19 @@ Special prop `label`, `fields`, `defaultField` , ...etc should be used with `typ
 
 <<<@/docs/.vuepress/components/custom-validator.vue
 
+### Custom Component
+
+::: tip Warm Prompt
+
+To custom component, you should ensure `version >= 2.5.0`
+:::
+
+**vue-dynamic-form-component** has components for common data type inside, so you don't need to custom the component generally. But sometimes, we need to custom the component, such as upload a file. To meet these scenes, I provide a way to custom the component. Usage like this:
+
+<code-demo name="custom-component" lang="en_US"></code-demo>
+
+<<<@/docs/.vuepress/components/custom-component.vue
+
 ### Form Operations
 
 **vue-dynamic-form-component** provides some common methods to operate form, you can use them with `operations` slot.

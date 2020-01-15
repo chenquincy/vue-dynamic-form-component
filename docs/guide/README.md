@@ -9,6 +9,7 @@
 - Support **nested form** for `Object `/ `Array` / `Hashmap` 
 - Support data **validation**
 - **Multi-Languages** support
+- Support **custom component**
 
 ## Question
 

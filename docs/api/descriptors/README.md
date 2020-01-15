@@ -9,12 +9,17 @@
 ## descriptor
 
 ::: tip Warm Prompt
-**descriptor** can be `object` or `array`, but the `fields`, `defaultFields`, `label`, `placeholder`, `hidden`, `disabled`, `options`, `autocomplete`  props should be brother props with `type`. In addition, there is only one object include `type` prop in array.
+**descriptor** can be `object` or `array`, but the `fields`, `defaultFields`, `label`, `hidden`, `disabled`, `options`, `component`  props should be brother props with `type`. In addition, there is only one object include `type` prop in array.
 :::
 
 ### type
 
 `string`, declare the type of data's field, include common data type.
+
+::: warning 注意
+
+Note that [descriptor.component.name](/zh/api/descriptors/#props) has higher priority, the follow rules are invalid if `descriptor.component.name` is not null.
+:::
 
 | Value     | Description                                                  | Component           |
 | --------- | ------------------------------------------------------------ | ------------------- |
@@ -35,10 +40,6 @@
 ### label
 
 `string`, field's label in form, should be declared with `type` in the same object.
-
-### props
-
-`object` type, it will be the value of input component's `v-bind` prop(input component refer to [descriptor.type](/api/descriptors/#type)). You can custom the component with this option, there are some common prop like: `placeholder`, `disabled`, ... , etc. Other props of component refer to [element-ui](https://element.faas.ele.me/#/en-US/component/installation).
 
 ### hidden
 
@@ -206,3 +207,43 @@ const descriptors = {
 }
 ```
 
+### component
+
+Provided for user to custom the component easily, it can custom the component's content, props and events.
+
+``` js
+// component demo
+{
+  name: 'el-button',
+  props: {
+    type: 'primary',
+    size: 'small'
+  },
+  events: {
+    click () {
+      console.log('button click')
+    }
+  }
+}
+```
+
+#### name
+
+`string` type, custom to use which element or component.
+
+#### props
+
+`object` type, it will be the value of input component's `v-bind` prop(input component refer to [descriptor.type](/api/descriptors/#type)). You can custom the component props with this option, there are some common props like: `placeholder`, `disabled`, ... , etc. Other props of component refer to [element-ui](https://element.faas.ele.me/#/en-US/component/installation). Note that it will be the  value of the custom component's `v-bind` prop, if `component.name` is not null.
+
+#### events
+
+`object` type, it will be the value of input component's `v-on` prop(input component refer to [descriptor.type](/api/descriptors/#type)). You can custom the component props with this option, there are some common prop like: `placeholder`, `disabled`, ... , etc. Other props of component refer to [element-ui](https://element.faas.ele.me/#/en-US/component/installation). Note that it will be the  value of the custom component's `v-on` prop, if `component.name` is not null.
+
+#### children
+
+`children` is used to custom the content of component. It has two types:
+
+- `string` : the content is plain text. It will be inserted with `span` element
+- `array[component | string]` : the content has more than one element, the array item has two types:
+  - `component` : same structure with [component](/api/descriptors/#component) 
+  - `string` : the item is plain text. It will be inserted with `span` element

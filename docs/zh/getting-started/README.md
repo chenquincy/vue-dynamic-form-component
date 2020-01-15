@@ -125,6 +125,18 @@ export default {
 
 <<<@/docs/.vuepress/components/custom-validator.vue
 
+### 自定义组件
+
+::: tip 温馨提示
+使用自定义组件功能，需保证 `组件版本 >= 2.5.0`
+:::
+
+**vue-dynamic-form-component** 内置了常见数据类型的组件，一般情况下你不需要自定义组件。但有些情况下我们确实需要自定义组件，例如上传场景。为了满足特殊场景，我提供了自定义组件的方式。使用方式如下：
+
+<code-demo name="custom-component" lang="zh_CN"></code-demo>
+
+<<<@/docs/.vuepress/components/custom-component.vue
+
 ### 表单操作
 
 **vue-dynamic-form-component** 提供了几个常用的方法来操作表单，可以配合 `operations` 插槽使用。

@@ -9,7 +9,7 @@ meta:
   - name: google-site-verification
     content: -lX8u-MYYDkf5y6QhZWJqZoDxVkmAu004XwR3ynRwFg
 features:
-- title: Generate form by descriptors
+- title: Generate form by descriptors Or custom component
   details: Write only data's descriptor(extend from async-validate), then automatically generate form(use element-ui)
 - title: Support almost all data type with validation
   details: Support almost all data type and normal data validation(email, url, ... etc)
