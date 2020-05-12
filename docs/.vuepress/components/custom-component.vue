@@ -10,21 +10,34 @@ export default {
   data () {
     return {
       descriptors: {
-        image: {
-          type: 'url',
-          required: true,
-          message: 'please upload an image',
+        fruits: {
+          type: 'string',
+          message: 'choose your favorate fruit',
           component: {
-            name: 'el-upload',
-            children: [
-              { name: 'el-button', children: 'click to upload', props: { type: 'primary', plain: true, size: 'small' } }
-            ],
+            name: 'el-radio-group',
             props: {
-              action: 'https://jsonplaceholder.typicode.com/posts/',
-              onError: function (error, file, fileList) {
-                console.log('upload error ==> ', error)
+              fill: 'red'
+            },
+            events: {
+              change: (data) => {
+                window.alert(`you choose the ${data}`);
               }
-            }
+            },
+            children: [
+              {
+                name: 'el-radio-button',
+                props: {
+                  label: 'apple'
+                }
+              },
+              {
+                name: 'el-radio-button',
+                props: {
+                  label: 'banana',
+                  disabled: true
+                }
+              }
+            ]
           }
         }
       },
