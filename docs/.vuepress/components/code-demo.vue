@@ -4,7 +4,7 @@
       <summary>
         <span class="collapse">{{ lang === 'en_US' ? 'Click To Show/Hide Demo' : '点击显示/隐藏示例' }}</span>
       </summary>
-      <component class="demo" :is="name"></component>
+      <component class="demo" :is="name" :lang="lang"></component>
     </details>
   </div>
 </template>

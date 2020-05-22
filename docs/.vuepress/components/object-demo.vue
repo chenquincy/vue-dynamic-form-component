@@ -1,12 +1,14 @@
 <template>
   <dynamic-form
     v-model="data"
-    :descriptors="descriptors">
+    :descriptors="descriptors"
+    :lang="lang">
   </dynamic-form>
 </template>
 
 <script>
 export default {
+  props: ['lang'],
   data () {
     return {
       descriptors: {

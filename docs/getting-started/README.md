@@ -86,7 +86,7 @@ To generate **Hashmap**, use `type: 'object'` with `defaultField`
 
 ### Array
 
-To generate **Array**, use `type: 'array'` with `defaultField`. If the array items are enumable, you can use `type: 'enum'` in `defaultField` with `multiple: true` that will generate a multi-select component.
+To generate **Array**, use `type: 'array'` with `defaultField`. If the array items are enumerable, you can use `type: 'enum'` in `defaultField` with `multiple: true`. It will generate a multi-select component.
 
 <code-demo name="array-demo"></code-demo>
 
