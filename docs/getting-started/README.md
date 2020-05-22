@@ -86,7 +86,7 @@ To generate **Hashmap**, use `type: 'object'` with `defaultField`
 
 ### Array
 
-To generate **Array**, use `type: 'array'` with `defaultField`. If the array items are enumable, you can use `type: 'enum'` in `defaultField` with `multiple: true` that will generate a multi-select component.
+To generate **Array**, use `type: 'array'` with `defaultField`. If the array items are enumerable, you can use `type: 'enum'` in `defaultField` with `multiple: true`. It will generate a multi-select component.
 
 <code-demo name="array-demo"></code-demo>
 
@@ -137,6 +137,99 @@ To custom component, you should ensure `version >= 2.5.0`
 <code-demo name="custom-component" lang="en_US"></code-demo>
 
 <<<@/docs/.vuepress/components/custom-component.vue
+
+The component was writed by used `v-model` , so you can use the custom component directly after changing the `component.name`. The component structure in descriptors is:
+
+``` js
+component: {
+  name: 'el-radio-group', // component's name
+  props: {}, // component's props
+  events: {}, // component's events
+  children: [], // component or string(plain text dom)
+}
+```
+
+#### Component without v-model
+
+If you want to use component like `el-image` that without v-model, you need to write a component yourself.
+
+First, write the custom component:
+
+``` vue
+<template>
+  <div class="my-image">
+    <el-image :src="_value"></el-image>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'my-image',
+  props: {
+    value: {
+      required: true
+    }
+  },
+  computed: {
+    _value: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
+  }
+}
+</script>
+```
+
+Then, register it global:
+
+``` js
+import MyImage from './MyImage'
+Vue.component(MyImage.name, MyImage)
+```
+
+Finally, you can use the component like previous step.
+
+Also, you can add more feature to you custom component, such as set to default value when the image loaded error:
+
+``` vue
+<template>
+  <div class="my-image">
+    <el-image :src="_value" @error="error"></el-image>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'my-image',
+  props: {
+    value: {
+      required: true
+    }
+  },
+  computed: {
+    _value: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
+  },
+  method: {
+    error () {
+      this._value = '<default-image-url>'
+    }
+  }
+}
+</script>
+```
+
+
 
 ### Form Operations
 

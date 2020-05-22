@@ -2,7 +2,8 @@
   <dynamic-form
     ref="dynamic-form"
     v-model="data"
-    :descriptors="descriptors">
+    :descriptors="descriptors"
+    :lang="lang">
     <template slot="operations">
       <el-button @click="clearValidate">clearValidate</el-button>
       <el-button type="primary" @click="resetFields" plain>resetFields</el-button>
@@ -13,6 +14,7 @@
 
 <script>
 export default {
+  props: ['lang'],
   data () {
     return {
       descriptors: {

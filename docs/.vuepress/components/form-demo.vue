@@ -2,7 +2,7 @@
   <dynamic-form
     ref="dynamic-form"
     v-model="data"
-    lang="zh_CN"
+    :lang="lang"
     :descriptors="descriptors"
     size="mini"
     background-color="#FEFEFE"
@@ -18,6 +18,7 @@
 
 <script>
 export default {
+  props: ['lang'],
   data () {
     return {
       descriptors: {

@@ -131,11 +131,100 @@ export default {
 使用自定义组件功能，需保证 `组件版本 >= 2.5.0`
 :::
 
-**vue-dynamic-form-component** 内置了常见数据类型的组件，一般情况下你不需要自定义组件。但有些情况下我们确实需要自定义组件，例如上传场景。为了满足特殊场景，我提供了自定义组件的方式。使用方式如下：
+**vue-dynamic-form-component** 内置了常见数据类型的组件，一般情况下你不需要自定义组件。但有些情况下我们确实需要自定义组件，为了满足特殊场景，提供了自定义组件的方式，例如，当我们想要使用单选框来代替下拉选择时，使用方式如下：
 
 <code-demo name="custom-component" lang="zh_CN"></code-demo>
 
 <<<@/docs/.vuepress/components/custom-component.vue
+
+组件内部使用 v-model 进行数据绑定，因此，当自定义组件可以使用 v-model ，则不需要进行特殊处理，直接更改组件名即可，descriptors 中的自定义组件格式：
+
+``` json
+component: {
+  name: 'el-radio-group', // 要使用的自定义组件名称
+  props: {}, // 组件属性
+  events: {}, // 绑定事件
+  children: [], // 和组件相同的格式或者字符串表示纯文本节点
+}
+```
+
+#### 非 v-model 组件
+
+如果想要使用 el-image 这类非 v-model 组件，则需要自行封装一个组件来实现。新建一个自定义组件：
+
+``` vue
+<template>
+  <div class="my-image">
+    <el-image :src="_value"></el-image>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'my-image',
+  props: {
+    value: {
+      required: true
+    }
+  },
+  computed: {
+    _value: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
+  }
+}
+</script>
+```
+
+全局注册该组件
+
+``` js
+import MyImage from './MyImage'
+Vue.component(MyImage.name, MyImage)
+```
+
+之后就可以像上一步中一样使用该组件。
+
+当然你也可以在自定义组件中添加更多的逻辑，例如图片加载失败时替换为默认值：
+
+``` vue
+<template>
+  <div class="my-image">
+    <el-image :src="_value" @error="error"></el-image>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'my-image',
+  props: {
+    value: {
+      required: true
+    }
+  },
+  computed: {
+    _value: {
+      get () {
+        return this.value
+      },
+      set (value) {
+        this.$emit('input', value)
+      }
+    }
+  },
+  method: {
+    error () {
+      this._value = '<default-image-url>'
+    }
+  }
+}
+</script>
+```
 
 ### 表单操作
 
