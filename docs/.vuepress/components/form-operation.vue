@@ -20,14 +20,12 @@ export default {
       descriptors: {
         prop1: {
           type: 'object',
-          required: true,
           fields: {
             prop1: { type: 'string', required: true }
           }
         },
         prop2: {
           type: 'object',
-          required: true,
           defaultField: { type: 'string', required: true }
         }
       },

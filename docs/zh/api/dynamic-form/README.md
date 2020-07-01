@@ -14,7 +14,7 @@
 | bgColorOffset   | 不同层级表单的背景色偏移量                                   | number  |                   | 8      |      |
 | showOuterError  | 是否显示父组件的错误信息                                     | boolean |                   | true   |      |
 
-languages格式：
+`languages` 格式：
 
 ``` js
 // <lang> 与 lang 属性对应
