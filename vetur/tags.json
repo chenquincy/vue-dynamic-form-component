@@ -1,0 +1,7 @@
+{
+  "dynamic-form": {
+    "attributes": ["value", "lang", "languages", "descriptors", "size", "backgroundColor", "fontSize", "bgColorOffset", "showOuterError"],
+    "defaults": ["v-model", "descriptors"],
+    "description": "Generate form automatically by using descriptors."
+  }
+}

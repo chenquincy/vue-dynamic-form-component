@@ -1,6 +1,6 @@
 {
   "name": "vue-dynamic-form-component",
-  "version": "2.5.0",
+  "version": "2.6.0",
   "license": "MIT",
   "author": {
     "email": "mail@quincychen.cn",
@@ -25,6 +25,10 @@
   },
   "main": "./lib/vue-dynamic-form-component.umd.min.js",
   "typings": "types/index.d.ts",
+  "vetur": {
+    "tags": "vetur/tags.json",
+    "attributes": "vetur/attributes.json"
+  },
   "peerDependencies": {
     "element-ui": "^2.11.1",
     "vue": "^2.6.10"

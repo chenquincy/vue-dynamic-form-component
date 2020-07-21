@@ -2,72 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-# [2.5.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.4.1...v2.5.0) (2020-01-15)
+<a name="2.6.0"></a>
+# [2.6.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.5.0...v2.6.0) (2020-07-21)
+
+
+### Bug Fixes
+
+* upgrade danger deps ([2cc882a](https://github.com/chenquincy/vue-dynamic-form-component/commit/2cc882a))
 
 
 ### Features
 
-* support custom component ([febc7d9](https://github.com/chenquincy/vue-dynamic-form-component/commit/febc7d9)), closes [#5](https://github.com/chenquincy/vue-dynamic-form-component/issues/5)
-
-
-
-## [2.4.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.4.0...v2.4.1) (2019-12-31)
-
-
-### Bug Fixes
-
-* loss nested form-item's show-outer-error prop ([9216a50](https://github.com/chenquincy/vue-dynamic-form-component/commit/9216a50))
-
-
-
-# [2.4.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.3...v2.4.0) (2019-12-30)
-
-
-### Features
-
-* support to hidden outer layer's error message ([2dc9344](https://github.com/chenquincy/vue-dynamic-form-component/commit/2dc9344))
-
-
-
-## [2.3.3](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.2...v2.3.3) (2019-10-30)
-
-
-### Bug Fixes
-
-* key of hashmap not support "." ([28bff6f](https://github.com/chenquincy/vue-dynamic-form-component/commit/28bff6f))
-
-
-
-## [2.3.2](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.1...v2.3.2) (2019-10-28)
-
-
-### Bug Fixes
-
-* compatible enum type without descriptor.options ([5833ddf](https://github.com/chenquincy/vue-dynamic-form-component/commit/5833ddf))
-
-
-
-## [2.3.1](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.3.0...v2.3.1) (2019-09-23)
-
-
-### Bug Fixes
-
-* error component with 'boolean' type ([8f16d3f](https://github.com/chenquincy/vue-dynamic-form-component/commit/8f16d3f))
-
-
-
-# [2.3.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.2.0...v2.3.0) (2019-09-20)
-
-
-### Features
-
-* move component's props to descriptor.props ([d3a4bd9](https://github.com/chenquincy/vue-dynamic-form-component/commit/d3a4bd9)), closes [#6](https://github.com/chenquincy/vue-dynamic-form-component/issues/6)
-
-
-### BREAKING CHANGES
-
-* descriptor.disabled, descriptor.placeholder, descriptor.autocomplete are moved into
-descriptor.props.
+* add vetur prompt ([7992313](https://github.com/chenquincy/vue-dynamic-form-component/commit/7992313))
 
 
 
