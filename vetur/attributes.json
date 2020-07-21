@@ -1,0 +1,32 @@
+{
+  "value": {
+    "description": "value of form"
+  },
+  "lang": {
+    "options": ["zh_CN", "en_US", "<custom>"],
+    "description": "Select the language of form or input the language key of custom languages, default: zh_CN"
+  },
+  "languages": {
+    "description": "Custom language packages, format refer to the docs."
+  },
+  "descriptors": {
+    "description": "FormData's descriptors, which will be used to generate the form."
+  },
+  "size": {
+    "options": ["medium", "small", "mini"],
+    "description": "Size of component, default: small."
+  },
+  "background-color": {
+    "description": "Background color of form, default: #FFFFFF."
+  },
+  "font-size": {
+    "description": "Font size of form(for compute label's width), default: 14."
+  },
+  "bg-color-offset": {
+    "description": "Form background color offset(for distinguish the multi-level form), default 8."
+  },
+  "show-outer-error": {
+    "type": "boolean",
+    "description": "Whether show the error of the parent component, default: true"
+  }
+}
