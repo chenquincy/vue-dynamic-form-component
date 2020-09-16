@@ -10,9 +10,9 @@
     :rules="descriptor"
     :required="typeDescriptor.required"
     :label-width="labelWidth"
-    :show-message="showOuterError || !isComplexType(typeDescriptor.type)">
+    :show-message="showOuterError || !isComplexType(typeDescriptor.type) || Boolean(typeDescriptor.component)">
     <dynamic-input
-      v-if="!isComplexType(typeDescriptor.type)"
+      v-if="!isComplexType(typeDescriptor.type) || Boolean(typeDescriptor.component)"
       v-model="_value"
       :size="size"
       :descriptor="typeDescriptor">
