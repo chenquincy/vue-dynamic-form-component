@@ -4,7 +4,8 @@
       v-if="_value"
       ref="dynamic-form"
       :model="_value"
-      :rules="descriptors">
+      :rules="descriptors"
+      :disabled="disabled">
       <dynamic-form-item
         v-for="(descriptor, key) in descriptors"
         v-model="_value[key]"
@@ -47,6 +48,10 @@ export default {
      * custom languages, format refer to packages/i18n.js
      */
     languages: Object,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     /**
      * descriptor of value, extend from https://github.com/yiminghe/async-validator
      */

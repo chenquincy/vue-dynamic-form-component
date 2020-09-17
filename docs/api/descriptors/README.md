@@ -45,6 +45,10 @@ Note that [descriptor.component.name](/zh/api/descriptors/#props) has higher pri
 
 `boolean` , whether hidden the input component of value, should be declared with `type` in the same object. Note that the hidden value still will be validated while validating.
 
+### disabled
+
+`boolean`, whether input component disabled, default `false`.
+
 ### required
 
 `boolean`, is field required, without or `false` means the field is not required.

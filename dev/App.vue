@@ -5,7 +5,8 @@
       ref="dynamic-form"
       lang="en_US"
       :descriptors="descriptors"
-      :show-outer-error="false">
+      :show-outer-error="false"
+      :disabled="disabled">
       <template slot="operations">
         <el-button @click="reset">Reset</el-button>
         <el-button type="primary" @click="validate" plain>Validate</el-button>
@@ -27,18 +28,12 @@ export default {
   },
   data () {
     return {
+      disabled: true,
       data: {},
       descriptors
     }
   },
   watch: {
-    'data.string' (value) {
-      if (value) {
-        this.descriptors.object.fields.string.hidden = true
-      } else {
-        this.descriptors.object.fields.string.hidden = false
-      }
-    }
   },
   methods: {
     reset () {
