@@ -9,6 +9,7 @@
 | languages       | 自定义语言包                                                 | object  |                   |        |      |
 | descriptors     | 表单数据对象的描述器，详见 [descriptor](/zh/api/descriptors/) | object  |                   |        | 是   |
 | size            | 表单组件元素的大小                                           | string  | medium,small,mini | small  |      |
+| disabled        | 表单是否不可编辑                                             | boolean |                   | false  |      |
 | backgroundColor | 表单最外层背景                                               | string  | 如：#FFFFFF       | none   |      |
 | fontSize        | 表单字体大小                                                 | number  |                   | 14     |      |
 | bgColorOffset   | 不同层级表单的背景色偏移量                                   | number  |                   | 8      |      |

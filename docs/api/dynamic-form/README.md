@@ -9,6 +9,7 @@
 | languages       | custom language pack                                         | object  |                     |         |          |
 | descriptors     | descriptors of form data, refer to [descriptor](/zh/api/descriptors/) | object  |                     |         | yes      |
 | size            | size of form component                                       | string  | medium,small,mini   | small   |          |
+| disabled        | whether form is disabled                                     | boolean |                     | false   |          |
 | backgroundColor | root form background color                                   | string  | Hex color or 'none' | none    |          |
 | fontSize        | font size of form                                            | number  |                     | 14      |          |
 | bgColorOffset   | form background color offset                                 | number  |                     | 8       |          |
