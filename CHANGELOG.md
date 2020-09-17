@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.8.0"></a>
+# [2.8.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.7.0...v2.8.0) (2020-09-17)
+
+
+### Features
+
+* support form disabled ([7e51ba4](https://github.com/chenquincy/vue-dynamic-form-component/commit/7e51ba4))
+
+
+
 <a name="2.7.0"></a>
 # [2.7.0](https://github.com/chenquincy/vue-dynamic-form-component/compare/v2.6.0...v2.7.0) (2020-09-16)
 
