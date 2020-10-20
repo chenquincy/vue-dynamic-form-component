@@ -1,7 +1,7 @@
 # 快速上手
 
 ::: tip 温馨提示
-vue-dynamic-form-component 依赖于 [Vue](https://vuejs.org/) 和 [element-ui]([https://element.faas.ele.me)，请提前安装
+vue-dynamic-form-component 依赖于 [Vue](https://vuejs.org/) 和 [element-ui](https://element.faas.ele.me)，请提前安装
 :::
 
 ## 安装
@@ -44,7 +44,7 @@ Vue.use(DynamicForm)
 ### 组件内注册
 
 ::: tip 温馨提示
-不要忘记提前注册  [element-ui]([https://element.faas.ele.me)
+不要忘记提前注册  [element-ui](https://element.faas.ele.me)
 :::
 
 ``` vue
