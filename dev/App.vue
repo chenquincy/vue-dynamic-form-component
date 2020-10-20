@@ -28,7 +28,7 @@ export default {
   },
   data () {
     return {
-      disabled: true,
+      disabled: false,
       data: {},
       descriptors
     }
