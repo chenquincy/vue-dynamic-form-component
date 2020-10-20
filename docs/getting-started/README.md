@@ -1,7 +1,7 @@
 # Getting Started
 
 ::: tip Warm Prompt
-vue-dynamic-form-component should use with [Vue](https://vuejs.org/) and  [element-ui]([https://element.faas.ele.me), please install them first.
+vue-dynamic-form-component should use with [Vue](https://vuejs.org/) and  [element-ui](https://element.faas.ele.me), please install them first.
 :::
 
 ## Installation
@@ -44,7 +44,7 @@ Vue.use(DynamicForm)
 ### Registered in Component
 
 ::: tip Warm Prompt
-Don't forget to register the [element-ui]([https://element.faas.ele.me) first.
+Don't forget to register the [element-ui](https://element.faas.ele.me) first.
 :::
 
 ``` vue
