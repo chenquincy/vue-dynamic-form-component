@@ -2,22 +2,13 @@
   <component
     class="dynamic-input"
     v-model="_value"
-    v-if="!isSpecialType"
+    v-if="!isSpecialType || (descriptor.component && descriptor.component.name)"
     v-bind="_bind"
     v-on="_on"
     :is="_name"
     :size="size">
     <dynamic-component v-for="(component, index) in _children" :key="index" :component="component"></dynamic-component>
   </component>
-  <!-- integer, number, float type use el-input with v-model.number -->
-  <el-input
-    v-else-if="['integer', 'number', 'float'].includes(descriptor.type)"
-    class="dynamic-input"
-    v-model.number="_value"
-    v-bind="_bind"
-    v-on="_on"
-    :size="size">
-  </el-input>
   <!-- enum type use el-select -->
   <el-select
     v-else-if="descriptor.type === 'enum'"
@@ -139,7 +130,7 @@ export default {
       return []
     },
     isSpecialType () {
-      return ['integer', 'float', 'number', 'enum', 'date'].includes(this.descriptor.type)
+      return ['enum', 'date'].includes(this.descriptor.type)
     }
   },
   data () {
