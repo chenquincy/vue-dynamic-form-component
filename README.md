@@ -35,7 +35,7 @@ export default {
   data () {
     return {
       descriptors: {
-        name: { type: 'string', min: 3, mex: 15, required: true },
+        name: { type: 'string', min: 3, max: 15, required: true },
         homepage: { type: 'url', message: 'The homepage must be an url' },
         company: {
           type: 'object',
