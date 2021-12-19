@@ -4,8 +4,8 @@
 
 ## Docs
 
-- [English Docs](http://vue-dynamic-form.quincychen.cn)
-- [中文文档](http://vue-dynamic-form.quincychen.cn/zh/)
+- [English Docs](https://vue-dynamic-form.quincychen.cn)
+- [中文文档](https://vue-dynamic-form.quincychen.cn/zh/)
 
 ## Usage Example
 
