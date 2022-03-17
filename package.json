@@ -18,12 +18,19 @@
     "url": "https://github.com/chenquincy/vue-dynamic-form-component"
   },
   "scripts": {
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --dest lib --name vue-dynamic-form-component ./packages/index.js",
+    "dev": "vite",
+    "build": "vite build",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "main": "./lib/vue-dynamic-form-component.umd.min.js",
+  "main": "./lib/vue-dynamic-form-component.umd.js",
+  "module": "./lib/vue-dynamic-form-component.es.js",
+  "exports": {
+    ".": {
+      "import": "./lib/vue-dynamic-form-component.es.js",
+      "require": "./lib/vue-dynamic-form-component.umd.js"
+    }
+  },
   "typings": "types/index.d.ts",
   "vetur": {
     "tags": "vetur/tags.json",
@@ -44,7 +51,10 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
+    "sass": "^1.49.9",
     "sass-loader": "^7.1.0",
+    "vite": "^2.8.6",
+    "vite-plugin-vue2": "^1.9.3",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10",
     "vuepress": "^1.0.1",
