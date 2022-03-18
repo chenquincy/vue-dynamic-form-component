@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue, { VueConstructor } from 'vue'
 
 export type ComponentSize = 'large' | 'medium' | 'small' | 'mini'
 
@@ -43,4 +43,12 @@ declare class DynamicForm extends Vue {
   clearValidate (): void
 }
 
-export default DynamicForm
+export {
+  DynamicForm
+}
+
+declare const _default: {
+  install(Vue: VueConstructor): void
+};
+
+export default _default

@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import DynamicFormItem from '../dynamic-form-item/form-item'
+import DynamicFormItem from '../dynamic-form-item/form-item.vue'
 import { isComplexType, getLabelWidth, findTypeDescriptor } from '../utils'
 import i18n from '../i18n'
 

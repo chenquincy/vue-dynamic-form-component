@@ -102,7 +102,7 @@
 
 <script>
 import { isComplexType, getLabelWidth, darkenColor, parseDescriptor, findTypeDescriptor } from '../utils'
-import DynamicInput from '../dynamic-input/input'
+import DynamicInput from '../dynamic-input/input.vue'
 
 export default {
   name: 'dynamic-form-item',
