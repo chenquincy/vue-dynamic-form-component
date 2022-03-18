@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import { createVuePlugin } from 'vite-plugin-vue2'
+import VitePluginEslint from 'vite-plugin-eslint'
 import path from 'path'
 import singleCssPlugin from './build/ViteSingleCssPlugin';
 import { name as packageName } from './package.json'
@@ -26,5 +27,11 @@ export default defineConfig({
       }
     }
   },
-  plugins: [createVuePlugin(), singleCssPlugin()]
+  plugins: [
+    createVuePlugin(),
+    singleCssPlugin(),
+    VitePluginEslint({
+      include: ['packages/**/*.js', 'packages/**/*.vue']
+    })
+  ]
 })
